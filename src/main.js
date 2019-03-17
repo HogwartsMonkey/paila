@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.scss';
+import Section from './section.js';
 
-class Soon extends React.Component{
+class Main extends React.Component{
     render(){
-   return <p> soon I'll get id done</p>
+   return (
+       <React.Fragment>
+           <Section/>
+   </React.Fragment>
+   )
     };
 }
 
-ReactDOM.render(<Soon/>,document.getElementById('app'));
+ReactDOM.render(<Main/>,document.getElementById('app'));

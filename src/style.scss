@@ -27,3 +27,9 @@ html,body{
         }
     }
 }
+
+@media only screen and(max-width:600px){
+    .background .container {
+        background:  linear-gradient(to bottom,#ff99cc 20%,#ccff99 95%);
+    }
+}

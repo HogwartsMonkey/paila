@@ -14,15 +14,16 @@ html,body{
    .container {
         width:100%;
         height:40%;
-        background:  linear-gradient(to top, #ccff99 21%, #ff99cc 95%);
+        background:  linear-gradient(to right,#ff99cc 5%, #ccff99 77%);
 
         h1{
             color:white;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size:50px;
-            padding: 20px 20px 0 10px;
+            padding-left:10px;
+            margin:0;
             text-shadow: 3px 1px darkgrey;
-            text-align:center;
+            text-align:left;
         }
     }
 }

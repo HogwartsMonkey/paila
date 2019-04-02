@@ -16,20 +16,42 @@ html,body{
         height:40%;
         background:  linear-gradient(to right,#ff99cc 5%, #ccff99 77%);
 
-        h1{
-            color:white;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size:50px;
-            padding-left:10px;
-            margin:0;
-            text-shadow: 3px 1px darkgrey;
-            text-align:left;
+        .h-1{
+                display:inline-block;
+                float:left;
+                position: absolute;
+        
+            h1{
+                display:inline-block;
+                background-color:black;
+                color:white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size:50px;
+                padding:0 5px 0 5px;
+                margin:10px 0 0 10px;
+                
+                text-align:left;
+            }
         }
     }
 }
 
 @media only screen and(max-width:600px){
-    .background .container {
+    .background {
+        .container {
         background:  linear-gradient(to bottom,#ff99cc 20%,#ccff99 95%);
+            .h-1{
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%,-50%);
+                    min-width:70%;
+                    h1 {
+                        font-size:30px;
+                        background-color:black;
+                        text-align:center;
+                        margin:0;
+                    }
+            }
+        }
     }
 }

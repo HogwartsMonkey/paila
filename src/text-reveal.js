@@ -8,9 +8,11 @@ class FadeExample extends React.Component {
   render() {
     return (
       <div style={{'width':'100%','height':'100%'}}>
-        <Fade when={this.props.willReavel}  delay={500}  >
+        <div className="h-1">
+        <Fade when={this.props.willReavel}  delay={300}  >
           <h1>Create Value.</h1>
         </Fade>
+        </div>
       </div>
     );
   }

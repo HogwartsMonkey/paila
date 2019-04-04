@@ -35,11 +35,11 @@ export class TextHeader extends React.Component{
           <div className="text">
 
             <Fade when={this.props.willReavel} delay={300}>
-            <p>Exploring Data.</p>
+            <p>Crunching Data.</p>
             </Fade> 
 
             <Fade when={this.props.willReavel} delay={900}>
-          <p> Crunching Figures.</p>
+          <p>Serving Creativity.</p>
           </Fade>
 
             <Fade when={this.props.willReavel} delay={1400} cascade>

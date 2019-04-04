@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeHeader,{TextHeader} from './text-reveal.js';
+import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
 
 
 export default class Section extends React.Component{
@@ -17,12 +17,15 @@ export default class Section extends React.Component{
     render(){
 
         return(
+            <React.Fragment>
             <div className="background">
                 <div className="container">
                     <TextHeader willReavel={this.state.willReavel}/>
                     <FadeHeader willReavel={this.state.willReavel}/>
                 </div>
+                <NavBar willReavel={this.state.willReavel}/>
             </div>
+            </React.Fragment>
         )
     };
 

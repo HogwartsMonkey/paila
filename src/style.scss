@@ -32,7 +32,7 @@ html,body{
                 text-shadow: 1px 1px pink;
                 color: white;
                 font-weight: 600;
-                 font-size:30px;
+                 font-size:40px;
                 
             }
             
@@ -50,7 +50,7 @@ html,body{
                         display:inline-block;
                         background-color:black;
                         color:white;
-                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
                         font-size:50px;
                         padding:0 10px;
                         margin:10px 0 0 10px;
@@ -60,6 +60,26 @@ html,body{
             }
         }
     }
+    
+        .nav_menu{
+            position: absolute;
+            right:0;
+            padding:10px 5px;
+
+            ul{
+                list-style: none;
+
+                li{
+                    display:inline;
+                    margin:5px;
+                    padding:5px 10px;
+                    color:white;
+                    font-family: Verdana, sans-serif;
+                    font-weight:500;
+                    font-size:20px;
+                }
+            }
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -67,9 +87,16 @@ html,body{
 
          .container {
             background:  linear-gradient(to bottom,#ff99cc 20%,#ccff99 95%);
+        
+            .text{
+
+                p{
+                    font-size:25px;
+                }
+            }
             
             .headline-container {
-               
+
                 .h-1{
                      min-width:70%;
 
@@ -82,5 +109,13 @@ html,body{
                     }
             }
         }
+
+        .nav_menu{
+            position: absolute;
+            right:0;
+            margin-top:30px;
+        }
+
     }
+    
 }

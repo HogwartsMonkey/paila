@@ -1,5 +1,6 @@
 import React from 'react';
-import FadeHeader from './text-reveal.js';
+import FadeHeader,{TextHeader} from './text-reveal.js';
+
 
 export default class Section extends React.Component{
     constructor(props){
@@ -18,8 +19,7 @@ export default class Section extends React.Component{
         return(
             <div className="background">
                 <div className="container">
-                    <div className="text">
-                    <p>Crunching.<br></br>Turning.<br></br>Delivering.</p></div>
+                    <TextHeader willReavel={this.state.willReavel}/>
                     <FadeHeader willReavel={this.state.willReavel}/>
                 </div>
             </div>

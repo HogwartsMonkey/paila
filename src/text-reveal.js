@@ -10,12 +10,12 @@ export class FadeHeader extends React.Component {
       <div className="headline-container">
       
         <div className="h-1">
-          <Fade when={this.props.willReavel}  delay={300}  >
+          <Fade when={this.props.willReavel}  duration={1000}   delay={300}  >
             <h1>Paila</h1>
           </Fade>
         </div>
         <div className="h-1">
-          <Fade when={this.props.willReavel}  delay={300}  >
+          <Fade when={this.props.willReavel} duration={1000}    delay={300}  >
             <h1>Creating Value.</h1>
           </Fade>
         </div>
@@ -34,15 +34,15 @@ export class TextHeader extends React.Component{
       return(
           <div className="text">
 
-            <Fade when={this.props.willReavel} delay={300}>
-            <p>Crunching Data.</p>
+            <Fade when={this.props.willReavel}  duration={1000}  delay={300}>
+            <p>Exploring Data.</p>
             </Fade> 
 
-            <Fade when={this.props.willReavel} delay={300}>
+            <Fade when={this.props.willReavel} duration={1000}   delay={300}>
           <p>Serving Creativity.</p>
           </Fade>
 
-            <Fade when={this.props.willReavel} delay={300} cascade>
+            <Fade when={this.props.willReavel} duration={1000}  delay={300} cascade>
           <p>Delivering.</p>
           </Fade>
 
@@ -58,7 +58,7 @@ export class NavBar extends React.Component{
   render(){
   
 return(
-    <Fade when={this.props.willReavel} delay={300}>
+    <Fade when={this.props.willReavel} duration={1000}  delay={300}>
       <div className="nav_menu">
         <ul>
             <li>Who</li>

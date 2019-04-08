@@ -1,14 +1,14 @@
 import React from 'react';
 import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
-
+import {TextSection} from './introduction.js';
 
 export default class Section extends React.Component{
     constructor(props){
     super(props);
     this.state = { 
         willReavel: false, 
-        frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'}
-    
+        frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
+        headlineText: 'Lorem ipsum dolor sit amet.'
     };
 
     }
@@ -40,7 +40,7 @@ export default class Section extends React.Component{
                 </div>
             
                 <NavBar willReavel={this.state.willReavel}/>
-
+                <TextSection text={this.state.headlineText} willReavel={this.state.willReavel}/>
             </div>
 
             </React.Fragment>

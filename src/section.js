@@ -8,7 +8,8 @@ export default class Section extends React.Component{
     this.state = { 
         willReavel: false, 
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
-        headlineText: 'Lorem ipsum dolor sit amet.'
+        headlineText: 'Lorem ipsum dolor sit amet.',
+        content: 'Civibus appetere petentium at vis, singulis molestiae vituperata eam ei. At duo dictas vocibus phaedrum. Laudem scriptorem dissentiet duo ad, mea vide decore similique ut. Nullam forensibus duo te, quas sapientem periculis cum at. Elitr facilisi deterruisset quo ea. Mei quot homero intellegat te, vidit consectetuer in pro, placerat eleifend vel ex.'
     };
 
     }
@@ -40,7 +41,7 @@ export default class Section extends React.Component{
                 </div>
             
                 <NavBar willReavel={this.state.willReavel}/>
-                <TextSection text={this.state.headlineText} willReavel={this.state.willReavel}/>
+                <TextSection text={this.state.content} headline={this.state.headlineText} willReavel={this.state.willReavel}/>
             </div>
 
             </React.Fragment>

@@ -11,7 +11,7 @@ export class TextSection extends React.Component{
 
             <Fade when={this.props.willReveal} bottom delay={300}>
                 <div className="h2-container">
-                <div><h2>{this.props.text}</h2></div>
+                <div><h2>{this.props.headline}</h2></div>
                 
                 <div><h3>{this.props.text}</h3></div>
                 </div>

@@ -35,15 +35,15 @@ export class TextHeader extends React.Component{
           <div className="text">
 
             <Fade when={this.props.willReavel}  duration={1000} top delay={300}>
-            <p>Exploring Data.</p>
+            <div> <p>Exploring Data.</p></div>
             </Fade> 
 
             <Fade when={this.props.willReavel} duration={1000} top  delay={300}>
-          <p>Serving Creativity.</p>
+            <div>  <p>Serving Creativity.</p></div>
           </Fade>
 
             <Fade when={this.props.willReavel} duration={1000} top delay={300}>
-          <p>Delivering.</p>
+            <div><p>Delivering.</p></div>
           </Fade>
 
           </div>
@@ -64,6 +64,7 @@ return(
           <ul>
               <li onClick={function(){console.log('hi')}}>Who</li>
               <li>How</li>
+              <li>What</li>
               <li>Why</li>
             </ul>
         </div>

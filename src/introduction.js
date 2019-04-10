@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Fade from 'react-reveal/Fade';
 import { runInThisContext } from 'vm';
 
@@ -27,15 +26,19 @@ export class TextBox extends React.Component{
     super(props);
         this.state = {
             offset:'',
-            willReveal: false
+            willReveal: false,
+            selectedSection: this.props.selectedSection
         };
     }
 
     componentDidUpdate(prevProps){
-        if (prevProps.windowPosition !== this.props.windowPosition){
+        if (prevProps !== this.props){
             if( this.props.windowPosition > this.state.offset){
                 this.setState({willReveal:true})
-            }   
+            }
+            if(this.props.selectedSection !== this.state.selectedSection)  {
+                this.setState({selectedSection: this.props.selectedSection})
+            }
         }
     }
 
@@ -47,7 +50,12 @@ export class TextBox extends React.Component{
 
     render(){
         return(
-           <Fade when={this.state.willReveal} bottom><div id="text_box" style= {{marginTop: '50px',width:'100%',height:'50px',backgroundColor:'white'}}>
+           <Fade when={(this.state.willReveal==true ||this.props.showSection == true ? true : false )} bottom>
+           <div id="text_box" style= {{marginTop: '50px',width:'100%',height:'50px',backgroundColor:'white'}}>
+            <p style={{textAlign:'center',padding:'10px'}}>
+                {this.props.currentTextInTextBox[this.state.selectedSection]}
+            </p>
+            
             </div>
             </Fade> 
         )

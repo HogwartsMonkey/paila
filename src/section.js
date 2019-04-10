@@ -10,10 +10,18 @@ export default class Section extends React.Component{
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
         headlineText: 'Choose Yourself',
         content: 'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
-        positionY:1
+        positionY:1,
+        showSection: false,
+        currentTextInTextBox: ['hello im 0',
+            'um propriae accusamus ne. Vidit magna feugiat eum ex. Eos id eirmod vulputate, meis interpretaris eu vis. Ea stet prima nec, et propriae sapientem necessitatibus eam. Mazim platonem mel eu, ex dicit noluisse rationi',
+            'hello Im number2',
+            'hello Im number3',
+            ],
+        selectedSection: 0
     }
 
         this.handleScroll = this.handleScroll.bind(this);
+        this.changeVisability = this.changeVisability.bind(this);
     }
     
 
@@ -35,6 +43,11 @@ export default class Section extends React.Component{
         this.setState({positionY: currentY});
     }
 
+    changeVisability(i){
+      if(this.state.showSection == false){
+        this.setState( {showSection:true,selectedSection:i})
+      }
+    }
 
     render(){
 
@@ -54,10 +67,9 @@ export default class Section extends React.Component{
 
                 </div>
             
-                <NavBar willReavel={this.state.willReavel}/>
-                <TextSection text={this.state.content} headline={this.state.headlineText} willReavel={this.state.willReavel}/>
-                <div style={{width:'100%',height:'50px'}}></div>
-                <TextBox windowPosition={this.state.positionY}/>
+                <NavBar changeVisability={this.changeVisability} willReavel={this.state.willReavel}/>
+                <TextSection showSection={this.state.showSection} text={this.state.content} headline={this.state.headlineText} willReavel={this.state.willReavel}/>
+                <TextBox showSection={this.state.showSection} windowPosition={this.state.positionY} currentTextInTextBox={this.state.currentTextInTextBox} selectedSection={this.state.selectedSection}/>
             </div>
 
             </React.Fragment>

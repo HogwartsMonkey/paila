@@ -55,6 +55,7 @@ export class NavBar extends React.Component{
   constructor(props){
     super(props); 
 }
+
   render(){
   
 return(
@@ -62,7 +63,7 @@ return(
     <div style={{display:'block',position:'relative',minHeight:'50px'}}>
         <div className="nav_menu">
           <ul>
-              <li onClick={function(){console.log('hi')}}>Who</li>
+              <li onClick={()=>{this.props.changeVisability(3)}}>Who</li>
               <li>How</li>
               <li>What</li>
               <li>Why</li>

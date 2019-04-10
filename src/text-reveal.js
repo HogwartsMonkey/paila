@@ -63,10 +63,10 @@ return(
     <div style={{display:'block',position:'relative',minHeight:'50px'}}>
         <div className="nav_menu">
           <ul>
-              <li onClick={()=>{this.props.changeVisability(3)}}>Who</li>
-              <li>How</li>
-              <li>What</li>
-              <li>Why</li>
+              <li onClick={()=>{this.props.changeVisability(0)}}>Who</li>
+              <li onClick={()=>{this.props.changeVisability(1)}}>How</li>
+              <li onClick={()=>{this.props.changeVisability(2)}}>What</li>
+              <li onClick={()=>{this.props.changeVisability(3)}}>Why</li>
             </ul>
         </div>
       </div>

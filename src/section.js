@@ -44,7 +44,7 @@ export default class Section extends React.Component{
     }
 
     changeVisability(i){
-      if(this.state.showSection == false){
+      if(this.state.showSection == false || this.state.showSection !== i){
         this.setState( {showSection:true,selectedSection:i})
       }
     }

@@ -12,9 +12,27 @@ export class TextSection extends React.Component{
 
             <Fade when={this.props.willReveal} bottom delay={300}>
                 <div className="h2-container">
-                <div><h2>{this.props.headline}</h2></div>
-                
-                <div><h3>{this.props.text}</h3></div>
+
+                <Fade when={this.props.selectedSection == 0 ? true : false} bottom delay={300}>
+                <div style={{position:'absolute'}}><h2> {this.props.currentHeadline[0]}</h2></div>
+                </Fade>
+
+                <Fade when={this.props.selectedSection == 1 ? true : false} bottom delay={300}>
+                <div style={{position:'absolute'}}><h2> {this.props.currentHeadline[1]}</h2></div>
+                </Fade>
+
+                <Fade when={this.props.selectedSection == 2 ? true : false} bottom delay={300}>
+                <div style={{position:'absolute'}}><h2> {this.props.currentHeadline[2]}</h2></div>
+                </Fade>
+
+                <Fade when={this.props.selectedSection == 3 ? true : false} bottom delay={300}>
+                <div style={{position:'absolute'}}><h2> {this.props.currentHeadline[3]}</h2></div>
+                </Fade>
+
+                <Fade when={this.props.selectedSection == 4 ? true : false} bottom delay={300}>
+                <div style={{position:'absolute'}}><h2> {this.props.currentHeadline[4]}</h2></div>
+                </Fade>
+
                 </div>
          </Fade>
         )
@@ -50,12 +68,29 @@ export class TextBox extends React.Component{
 
     render(){
         return(
-           <Fade when={(this.state.willReveal==true ||this.props.showSection == true ? true : false )} bottom>
-           <div id="text_box" style= {{marginTop: '50px',width:'100%',height:'50px',backgroundColor:'white'}}>
-            <p style={{textAlign:'center',padding:'10px'}}>
-                {this.props.currentTextInTextBox[this.state.selectedSection]}
-            </p>
-            
+           <Fade when={(this.props.showSection == true || this.state.willReveal ? true : false )} bottom>
+           <div id="text_box" className="nav_bar_section">
+
+           <Fade when={(this.props.selectedSection == 0  ? true : false )} bottom>
+            <p>{this.props.currentTextInTextBox[0]} </p>
+            </Fade>
+
+            <Fade when={(this.props.selectedSection == 1  ? true : false )} bottom>
+            <p>{this.props.currentTextInTextBox[1]} </p>
+            </Fade>
+
+            <Fade when={(this.props.selectedSection == 2 ? true : false )} bottom>
+            <p>{this.props.currentTextInTextBox[2]} </p>
+            </Fade>
+
+            <Fade when={(this.props.selectedSection == 3  ? true : false )} bottom>
+            <p>{this.props.currentTextInTextBox[3]} </p>
+            </Fade>
+
+            <Fade when={(this.props.selectedSection == 4  ? true : false )} bottom>
+            <p>{this.props.currentTextInTextBox[4]} </p>
+            </Fade>
+
             </div>
             </Fade> 
         )

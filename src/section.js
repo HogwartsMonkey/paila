@@ -8,11 +8,12 @@ export default class Section extends React.Component{
     this.state = { 
         willReavel: false, 
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
-        headlineText: 'Choose Yourself',
-        content: 'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
+        currentHeadline: ['Choose Yourself','Who','How','What','why'],
         positionY:1,
         showSection: false,
-        currentTextInTextBox: ['hello im 0',
+        currentTextInTextBox: [
+            'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
+            'hello im 0',
             'um propriae accusamus ne. Vidit magna feugiat eum ex. Eos id eirmod vulputate, meis interpretaris eu vis. Ea stet prima nec, et propriae sapientem necessitatibus eam. Mazim platonem mel eu, ex dicit noluisse rationi',
             'hello Im number2',
             'hello Im number3',
@@ -67,9 +68,10 @@ export default class Section extends React.Component{
 
                 </div>
             
-                <NavBar changeVisability={this.changeVisability} willReavel={this.state.willReavel}/>
-                <TextSection showSection={this.state.showSection} text={this.state.content} headline={this.state.headlineText} willReavel={this.state.willReavel}/>
+                <NavBar changeVisability={this.changeVisability} willReavel={this.state.willReavel} selectedSection={this.state.selectedSection}/>
+                <TextSection showSection={this.state.showSection} text={this.state.content} willReavel={this.state.willReavel} currentHeadline={this.state.currentHeadline} selectedSection={this.state.selectedSection}/>
                 <TextBox showSection={this.state.showSection} windowPosition={this.state.positionY} currentTextInTextBox={this.state.currentTextInTextBox} selectedSection={this.state.selectedSection}/>
+           
             </div>
 
             </React.Fragment>

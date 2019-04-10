@@ -54,20 +54,21 @@ export class TextHeader extends React.Component{
 export class NavBar extends React.Component{
   constructor(props){
     super(props); 
+    
 }
 
   render(){
   
 return(
     <Fade when={this.props.willReavel} duration={1000} bottom delay={300}>
-    <div style={{display:'block',position:'relative',minHeight:'50px'}}>
+    <div className="text-box">
         <div className="nav_menu">
           <ul>
-              <li onClick={()=>{this.props.changeVisability(0)}}>Who</li>
-              <li onClick={()=>{this.props.changeVisability(1)}}>How</li>
-              <li onClick={()=>{this.props.changeVisability(2)}}>What</li>
-              <li onClick={()=>{this.props.changeVisability(3)}}>Why</li>
-            </ul>
+              <li className={this.props.selectedSection == 1 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(1)}}>Who</li>
+              <li className={this.props.selectedSection == 2 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(2)}}>How</li>
+              <li className={this.props.selectedSection == 3 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(3)}}>What</li>
+              <li className={this.props.selectedSection == 4 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(4)}}>Why</li>
+          </ul>
         </div>
       </div>
     </Fade>

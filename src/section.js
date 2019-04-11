@@ -104,8 +104,11 @@ export default class Section extends React.Component{
                     windowPosition={this.state.positionY} 
                     currentTextInTextBox={this.state.currentTextInTextBox} 
                     selectedSection={this.state.selectedSection}/>
-
-                <ContactForm/>
+                <div style={{width:'100%',height:'300px'}}></div>
+                <ContactForm 
+                windowPosition={this.state.positionY}
+                windowHeight={this.state.windowHeight}
+                 />
             </div>
 
             </React.Fragment>

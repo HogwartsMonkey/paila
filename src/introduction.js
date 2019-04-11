@@ -43,7 +43,8 @@ export class TextBox extends React.Component{
     constructor(props){
     super(props);
         this.state = {
-            offset:'',
+            offsetHeight:'',
+            offsetBottom:'',
             willReveal: false,
             selectedSection: this.props.selectedSection
         };
@@ -51,7 +52,7 @@ export class TextBox extends React.Component{
 
     componentDidUpdate(prevProps){
         if (prevProps !== this.props){
-            if( this.props.windowPosition > this.state.offset){
+            if( this.props.windowPosition > this.state.offsetHeight){
                 this.setState({willReveal:true})
             }
             if(this.props.selectedSection !== this.state.selectedSection)  {
@@ -62,14 +63,17 @@ export class TextBox extends React.Component{
 
     componentDidMount(){
         const element = document.getElementById("text_box");
-        let offsetTop = element.offsetHeight;
-        this.setState({offset: offsetTop});
+        let offsetHeight = element.offsetHeight;
+        let offsetBottom = element.offsetTop + offsetHeight;
+        this.setState({offsetHeight: offsetHeight ,offsetBottom: offsetBottom});
     }
 
     render(){
         return(
+           
            <Fade when={(this.props.showSection == true || this.state.willReveal ? true : false )} bottom>
            <div id="text_box" className="nav_bar_section">
+         
 
            <Fade when={(this.props.selectedSection == 0  ? true : false )} bottom>
             <p>{this.props.currentTextInTextBox[0]} </p>

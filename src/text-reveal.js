@@ -58,7 +58,6 @@ export class NavBar extends React.Component{
 }
 
   render(){
-  
 return(
     <Fade when={this.props.willReavel} duration={1000} bottom delay={300}>
     <div className="text-box">

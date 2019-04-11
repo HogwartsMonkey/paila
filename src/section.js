@@ -18,19 +18,23 @@ export default class Section extends React.Component{
             'hello Im number2',
             'hello Im number3',
             ],
-        selectedSection: 0
+        selectedSection: 0,
+        TextBoxoffSetBottom:''
     }
 
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);
+        this.getTextBoxOffSetBottom = this.getTextBoxOffSetBottom.bind(this);
     }
     
 
     componentDidMount(){
+        let container = document.querySelector('.h2-container');
+        let containerPosition = container.offsetTop;
         window.addEventListener('scroll',this.handleScroll);
+        this.getTextBoxOffSetBottom();
         this.setState((state)=>{
-             return ({willReavel : true})
-       
+             return ({willReavel : true,windowBottom:containerPosition })
         })
     }
 
@@ -45,9 +49,19 @@ export default class Section extends React.Component{
     }
 
     changeVisability(i){
-      if(this.state.showSection == false || this.state.showSection !== i){
-        this.setState( {showSection:true,selectedSection:i})
-      }
+      
+        window.scrollTo({top:this.state.windowBottom,behavior:'smooth'})
+        
+        if(this.state.showSection == false || this.state.selectedSection !== i){
+            this.setState( {showSection:true, selectedSection:i})
+        }
+    }
+
+    getTextBoxOffSetBottom(){
+        const element = document.getElementById("text_box");
+        let offsetHeight = element.offsetHeight;
+        let offsetBottom = element.offsetTop;
+        this.setState({TextBoxoffSetBottom: offsetBottom});
     }
 
     render(){
@@ -68,9 +82,25 @@ export default class Section extends React.Component{
 
                 </div>
             
-                <NavBar changeVisability={this.changeVisability} willReavel={this.state.willReavel} selectedSection={this.state.selectedSection}/>
-                <TextSection showSection={this.state.showSection} text={this.state.content} willReavel={this.state.willReavel} currentHeadline={this.state.currentHeadline} selectedSection={this.state.selectedSection}/>
-                <TextBox showSection={this.state.showSection} windowPosition={this.state.positionY} currentTextInTextBox={this.state.currentTextInTextBox} selectedSection={this.state.selectedSection}/>
+                <NavBar 
+                changeVisability={this.changeVisability} 
+                willReavel={this.state.willReavel} 
+                selectedSection={this.state.selectedSection}
+                TextBoxOffSetBottom={this.state.TextBoxoffSetBottom} 
+                />
+
+                <TextSection 
+                    showSection={this.state.showSection} 
+                    text={this.state.content} 
+                    willReavel={this.state.willReavel} 
+                    currentHeadline={this.state.currentHeadline} 
+                    selectedSection={this.state.selectedSection}/>
+
+                <TextBox 
+                    showSection={this.state.showSection} 
+                    windowPosition={this.state.positionY} 
+                    currentTextInTextBox={this.state.currentTextInTextBox} 
+                    selectedSection={this.state.selectedSection}/>
            
             </div>
 

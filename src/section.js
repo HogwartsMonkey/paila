@@ -19,7 +19,8 @@ export default class Section extends React.Component{
             'hello Im number3',
             ],
         selectedSection: 0,
-        TextBoxoffSetBottom:''
+        TextBoxoffSetBottom:'',
+        windowHeight: window.innerHeight
     }
 
         this.handleScroll = this.handleScroll.bind(this);
@@ -29,7 +30,7 @@ export default class Section extends React.Component{
     
 
     componentDidMount(){
-        let container = document.querySelector('.h2-container');
+        let container = document.querySelector('.headline-container');
         let containerPosition = container.offsetTop;
         window.addEventListener('scroll',this.handleScroll);
         this.getTextBoxOffSetBottom();
@@ -49,9 +50,10 @@ export default class Section extends React.Component{
     }
 
     changeVisability(i){
-      
+        let delta =  this.state.TextBoxoffSetBottom-this.state.positionY;
+        if(delta > this.state.windowHeight){
         window.scrollTo({top:this.state.windowBottom,behavior:'smooth'})
-        
+        }
         if(this.state.showSection == false || this.state.selectedSection !== i){
             this.setState( {showSection:true, selectedSection:i})
         }
@@ -60,7 +62,7 @@ export default class Section extends React.Component{
     getTextBoxOffSetBottom(){
         const element = document.getElementById("text_box");
         let offsetHeight = element.offsetHeight;
-        let offsetBottom = element.offsetTop;
+        let offsetBottom = element.offsetTop+offsetHeight;
         this.setState({TextBoxoffSetBottom: offsetBottom});
     }
 

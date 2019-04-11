@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
 import {TextSection,TextBox} from './introduction.js';
+import {ContactForm} from './contact-form.js';
 
 export default class Section extends React.Component{
     constructor(props){
@@ -13,10 +14,10 @@ export default class Section extends React.Component{
         showSection: false,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
-            'hello im 0',
+            'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.',
             'um propriae accusamus ne. Vidit magna feugiat eum ex. Eos id eirmod vulputate, meis interpretaris eu vis. Ea stet prima nec, et propriae sapientem necessitatibus eam. Mazim platonem mel eu, ex dicit noluisse rationi',
-            'hello Im number2',
-            'hello Im number3',
+            'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.2',
+            'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.',
             ],
         selectedSection: 0,
         TextBoxoffSetBottom:'',
@@ -103,7 +104,8 @@ export default class Section extends React.Component{
                     windowPosition={this.state.positionY} 
                     currentTextInTextBox={this.state.currentTextInTextBox} 
                     selectedSection={this.state.selectedSection}/>
-           
+
+                <ContactForm/>
             </div>
 
             </React.Fragment>

@@ -95,29 +95,29 @@ export default class Section extends React.Component{
                 <TextSection 
                     showSection={this.state.showSection} 
                     text={this.state.content} 
-                    willReavel={this.state.willReavel} 
                     currentHeadline={this.state.currentHeadline} 
+                    windowHeight={this.state.windowHeight}
+                    windowPosition={this.state.currentY}
                     selectedSection={this.state.selectedSection}/>
 
-                <TextBox 
+                <TextBox
                     showSection={this.state.showSection} 
                     windowPosition={this.state.positionY} 
                     currentTextInTextBox={this.state.currentTextInTextBox} 
-                    selectedSection={this.state.selectedSection}/>
-                <div style={{width:'100%',height:'300px'}}></div>
+                    selectedSection={this.state.selectedSection}
+                    TextBoxoffSetBottom={this.state.TextBoxoffSetBottom}
+                    windowHeight={this.state.windowHeight}
+                />
+                <div className="footer">
                 <ContactForm 
                 windowPosition={this.state.positionY}
                 windowHeight={this.state.windowHeight}
                  />
+                </div>
+              
             </div>
 
             </React.Fragment>
         )
     };
-
-
-
-
-
-
 }

@@ -5,6 +5,7 @@ export class FadeHeader extends React.Component {
     constructor(props){
         super(props);
     }
+    
   render() {
     return (
       <div className="headline-container">

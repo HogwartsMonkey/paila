@@ -6,11 +6,37 @@ import { runInThisContext } from 'vm';
 export class TextSection extends React.Component{
     constructor(props){
         super(props);
+        this.state ={
+            willReveal:this.props.willReveal
+        }
     }
+
+    componentDidUpdate(prevProps){
+        if(prevProps !== this.props){
+            (this.props = this.props)
+        }
+    }
+
+    componentDidMount(){
+        const element = document.querySelector(".h2-container");
+        let offsetHeight = element.offsetHeight;
+        let offsetBottom = element.offsetTop + offsetHeight;
+        let delta =  (offsetBottom -this.props.windowPosition);
+        if( delta < this.props.windowHeight ){
+            this.setState({willReveal:true,offsetHeight: offsetHeight ,offsetBottom: offsetBottom})
+        }
+        else{
+            this.setState({offsetHeight: offsetHeight ,offsetBottom: offsetBottom});
+
+        } 
+    
+
+    }
+
     render(){
         return(
 
-            <Fade when={this.props.willReveal} bottom delay={300}>
+            <Fade when={this.state.willReveal} bottom delay={300}>
                 <div className="h2-container">
 
                 <Fade when={this.props.selectedSection == 0 ? true : false} bottom delay={300}>
@@ -51,8 +77,9 @@ export class TextBox extends React.Component{
     }
 
     componentDidUpdate(prevProps){
+        let delta =  (this.props.TextBoxoffSetBottom-this.props.windowHeight);
         if (prevProps !== this.props){
-            if( this.props.windowPosition > this.state.offsetHeight){
+            if( this.props.windowPosition > this.state.offsetHeight ||delta < this.props.windowHeight ){
                 this.setState({willReveal:true})
             }
             if(this.props.selectedSection !== this.state.selectedSection)  {
@@ -65,7 +92,14 @@ export class TextBox extends React.Component{
         const element = document.getElementById("text_box");
         let offsetHeight = element.offsetHeight;
         let offsetBottom = element.offsetTop + offsetHeight;
-        this.setState({offsetHeight: offsetHeight ,offsetBottom: offsetBottom});
+        let delta =  (this.props.TextBoxoffSetBottom-this.props.windowPosition);
+        if( delta < this.props.windowHeight ){
+            this.setState({willReveal:true,offsetHeight: offsetHeight ,offsetBottom: offsetBottom})
+        }
+        else{
+            this.setState({offsetHeight: offsetHeight ,offsetBottom: offsetBottom});
+
+        } 
     }
 
     render(){

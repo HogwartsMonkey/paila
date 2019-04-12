@@ -22,7 +22,7 @@ html,body{
    .container {
         width:100%;
         height:400px;
-        background:  linear-gradient(to right,#ff99cc 5%, #ccff99 77%);
+        background:  linear-gradient(to right,#eb1c85 5%, #ccff99 77%);
         position: relative;
         
         .text{
@@ -93,6 +93,9 @@ html,body{
                     font-weight:500;
                     font-size:20px;
                     cursor: pointer;
+                    &:hover{ color:#ffffa9;
+
+                    }
                 }
 
                 .text-color {
@@ -146,17 +149,33 @@ html,body{
             }
       }
 
-      form{
-          width:100%;
-          background-color:white;
-          height:50px;
-          padding:10px;
-          
 
-            label{
+      .footer{
+
+        form{
+            width:100%;
+            background-color:white;
+            height:50px;
+            padding:10px;
+            
+            input[type=submit]{
                 font-family: Verdana, sans-serif;
-                margin-right:10px;
-            }
+                background-color:orange;
+                border-radius: 10px;
+                border-color:transparent;
+                width:200px;
+                color:white;
+                font-weight: 600;
+
+                }
+
+                label{
+                    font-family: Verdana, sans-serif;
+                    margin-right:10px;
+                
+                }
+        }
+
       }
 }
 

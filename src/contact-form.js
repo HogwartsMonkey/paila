@@ -58,7 +58,7 @@ export class ContactForm extends React.Component{
                         Email:
                         <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} />
                         </label>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="Send"/>
                     </form>
                 </Fade>
         )

@@ -168,7 +168,7 @@ html,body{
 
       .footer{
         background:  white;
-        height:90px;
+        height:50px;
         background: linear-gradient(to right, white 5%, #93a2b3 77%);
 
             form{
@@ -234,6 +234,20 @@ html,body{
             }
 
       }
+}
+
+
+@media only screen and (max-width:1300px){
+    .background{
+        .footer{
+            form{
+                .form{
+                    position:relative;
+                }   
+            }
+
+        }
+    }
 }
 
 @media only screen and (max-width:600px){

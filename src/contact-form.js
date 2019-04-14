@@ -5,14 +5,16 @@ export class ContactForm extends React.Component{
     constructor(props){
         super(props);
             this.state={
-            name:'',
-            email:'',
+            name:'Name',
+            email:'Email Address',
             willReveal:false,
             offsetTop:''
             
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.resetForm = this.resetForm.bind(this);
+        this.restoreDefaultValue = this.restoreDefaultValue.bind(this);
 
     }
     handleInputChange(event) {
@@ -25,8 +27,23 @@ export class ContactForm extends React.Component{
         });
       }
     
+      resetForm(event){
+        const target = event.target;
+        const name = target.name;
+        if(this.state[name])
+        this.setState({[name]:''})
+      }
 
-    handleSubmit(event) {
+      restoreDefaultValue(event){
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+            if(this.state[name] == ''){
+                this.setState({[name]:[name.charAt(0).toUpperCase()+name.slice(1)]})            
+             }   
+      }
+
+    handleSubmit(event){
         alert('A name was submitted: ' + this.state.name);
         event.preventDefault();
       }
@@ -50,14 +67,8 @@ export class ContactForm extends React.Component{
         return(
                 <Fade when={this.state.willReveal} top>
                     <form onSubmit={this.handleSubmit}>
-                        <label>
-                        Name:
-                        <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange} />
-                        </label>
-                        <label>
-                        Email:
-                        <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} />
-                        </label>
+                        <input type="text" name="name" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.name} onChange={this.handleInputChange} />
+                        <input type="text" name="email" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.email} onChange={this.handleInputChange} />
                         <input type="submit" value="Send"/>
                     </form>
                 </Fade>

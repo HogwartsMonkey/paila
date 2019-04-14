@@ -13,6 +13,13 @@ html,body{
 
 }
 
+@mixin background-color($background-color){
+    -webkit-transform: $background-color;
+    -ms-transform: $background-color;
+    transform: $background-color;
+}
+
+
 .background{
     background-color:black;
     width:100%;
@@ -151,14 +158,16 @@ html,body{
 
 
       .footer{
+          background-color: white;
 
         form{
             width:100%;
-            background-color:white;
-            height:50px;
+            background-color:transparent;
+            height:100px;
             padding:10px;
             
-            input[type=submit]{
+            input{
+            &[type=submit]{
                 font-family: Verdana, sans-serif;
                 background-color:orange;
                 border-radius: 10px;
@@ -168,10 +177,26 @@ html,body{
                 font-weight: 600;
 
                 }
+            &[type=text]{
+                font-family: Verdana, sans-serif;
+                display:inline-block;
+                border-radius: 2px;
+                border:1px solid grey;
+                padding:5px;
+                margin:5px;
+                width:150px;
+                color:grey;
+            }
+            }
 
                 label{
                     font-family: Verdana, sans-serif;
                     margin-right:10px;
+                    display:inline-block;
+                    font-weight: 600;
+                    color:grey;
+                    
+
                 
                 }
         }

@@ -14,8 +14,8 @@ export default class Section extends React.Component{
         showSection: false,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
-            'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.',
-            'um propriae accusamus ne. Vidit magna feugiat eum ex. Eos id eirmod vulputate, meis interpretaris eu vis. Ea stet prima nec, et propriae sapientem necessitatibus eam. Mazim platonem mel eu, ex dicit noluisse rationi',
+            'Online Industry Centric. We Help Our Clients Break Their Benchmark Glass Ceiling.',
+            'Performance Based Advertising.',
             'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.2',
             'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.',
             ],

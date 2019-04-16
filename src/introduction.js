@@ -108,7 +108,7 @@ export class TextBox extends React.Component{
            <Fade when={(this.props.showSection == true || this.state.willReveal ? true : false )} bottom>
            <div id="text_box" className="nav_bar_section">
          
-
+            <div className="nav_bar_section_1">
            <Fade when={(this.props.selectedSection == 0  ? true : false )} bottom>
             <p>{this.props.currentTextInTextBox[0]} </p>
             </Fade>
@@ -122,11 +122,20 @@ export class TextBox extends React.Component{
             </Fade>
 
             <Fade when={(this.props.selectedSection == 3  ? true : false )} bottom>
-            <p>{this.props.currentTextInTextBox[3]} </p>
+           <p>{this.props.currentTextInTextBox[3]} </p>
+           
             </Fade>
 
             <Fade when={(this.props.selectedSection == 4  ? true : false )} bottom>
             <p>{this.props.currentTextInTextBox[4]} </p>
+            </Fade>
+
+            </div>
+            <Fade when={(this.props.selectedSection == 3  ? true : false )} bottom>
+
+            <div className="nav_bar_section_2">
+           
+            </div>
             </Fade>
 
             </div>

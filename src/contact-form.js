@@ -49,7 +49,7 @@ export class ContactForm extends React.Component{
       }
 
       componentDidUpdate(prevProps){
-          let delta =this.state.offsetTop - this.props.windowPosition ;
+          let delta =this.state.offsetBottom - this.props.windowPosition ;
         if (prevProps !== this.props){
             if( delta < this.props.windowHeight){
                 this.setState({willReveal:true})
@@ -59,8 +59,8 @@ export class ContactForm extends React.Component{
 
       componentDidMount(){
         const element = document.querySelector("form");
-        let offsetTop = element.offsetTop;
-        this.setState({offsetTop: offsetTop});
+        let offsetBottom = element.offsetTop+element.offsetHeight;
+        this.setState({offsetBottom: offsetBottom});
     }
 
     render(){

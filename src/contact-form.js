@@ -5,8 +5,8 @@ export class ContactForm extends React.Component{
     constructor(props){
         super(props);
             this.state={
-            name:'Type Name',
-            email:'Type Email Address',
+            name:'Name',
+            email:'Email Address',
             willReveal:false,
             offsetTop:'',
             isFocus:false
@@ -72,11 +72,11 @@ export class ContactForm extends React.Component{
                 <div className="form">
                     <div>Get More Details</div>
                     <div>
-                        <input className={this.state.isFocus == true ? 'focus' : 'input'} type="text" name="name" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.name} onChange={this.handleInputChange} />
+                        <input  type="text" name="name" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.name} onChange={this.handleInputChange} />
                     </div>
 
                     <div>
-                       <input  className={this.state.isFocus == true ? 'focus' : 'input'} type="text" name="email" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.email} onChange={this.handleInputChange} />
+                       <input   type="text" name="email" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.email} onChange={this.handleInputChange} />
                     </div>
 
                     <div>

@@ -8,7 +8,8 @@ export class ContactForm extends React.Component{
             name:'Type Name',
             email:'Type Email Address',
             willReveal:false,
-            offsetTop:''
+            offsetTop:'',
+            isFocus:false
             
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,7 +32,7 @@ export class ContactForm extends React.Component{
         const target = event.target;
         const name = target.name;
         if(this.state[name] = [name.charAt(0).toLowerCase()+name.slice(1)])
-        this.setState({[name]:''})
+        this.setState({[name]:'',isFocus:true})
       }
 
       restoreDefaultValue(event){
@@ -71,11 +72,11 @@ export class ContactForm extends React.Component{
                 <div className="form">
                     <div>Get More Details</div>
                     <div>
-                        <input type="text" name="name" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.name} onChange={this.handleInputChange} />
+                        <input className={this.state.isFocus == true ? 'focus' : 'input'} type="text" name="name" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.name} onChange={this.handleInputChange} />
                     </div>
 
                     <div>
-                       <input className="pink" type="text" name="email" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.email} onChange={this.handleInputChange} />
+                       <input  className={this.state.isFocus == true ? 'focus' : 'input'} type="text" name="email" onFocus={this.resetForm} onBlur={this.restoreDefaultValue} value={this.state.email} onChange={this.handleInputChange} />
                     </div>
 
                     <div>

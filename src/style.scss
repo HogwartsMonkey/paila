@@ -191,7 +191,9 @@ html,body{
                     position: absolute;
                     left:50%;
                     transform: translateX(-50%);
-                    top:0;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
 
                     div{
                         display:inline-block;
@@ -200,6 +202,8 @@ html,body{
                         color:gainsboro;
                         font-weight: 600;
                         padding:10px;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
 
                }

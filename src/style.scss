@@ -157,7 +157,10 @@ html,body{
             overflow: hidden;
             padding:0 20px;
 
-            
+            .nav_bar_section_1{
+                position: relative;
+                width:60%;
+                height:150px;
                         
                         p{
                             position: absolute;
@@ -168,6 +171,7 @@ html,body{
                             word-spacing:1px;
                             letter-spacing: 0.1cm;
                         }
+            }
 
         }
     
@@ -268,6 +272,17 @@ html,body{
     }
 }
 
+@media only screen and (max-width:1000px){
+    .background{
+        .nav_bar_section{
+           .nav_bar_section_1{
+                width:80%;
+            }
+        }
+    }
+}
+
+
 @media only screen and (max-width:600px){
     .background {
 
@@ -312,6 +327,9 @@ html,body{
 
         .nav_bar_section{
             height:170px;
+            .nav_bar_section_1{
+                width:100%;
+            }
         }
 
         .footer{

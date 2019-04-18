@@ -157,9 +157,10 @@ html,body{
         .nav_bar_section{
             display:block;
             position:relative;
-            min-height:150px;
             overflow: hidden;
-            padding:0 20px 20px 20px;
+            transition:height 5000ms linear;
+            height:auto;
+
 
             .nav_bar_section_1{
                 position: relative;
@@ -167,6 +168,7 @@ html,body{
                 height:150px;
                 display:inline-block;
                 float:left;
+                transition:height 5000ms linear;
                         
                         p{
                             position: absolute;
@@ -185,6 +187,8 @@ html,body{
                 width:40%;
                 height:150px;
                 display:inline-block;
+                transition:height 5000ms linear;
+
 
                     p{
                         color:black;
@@ -196,9 +200,7 @@ html,body{
                         text-align:left;
                         display:inline-block;
                         background-color:yellow;
-                        padding:5px;
                         border-radius: 5px;
-                        margin-bottom: 10px;
 
                     }
                 
@@ -209,7 +211,6 @@ html,body{
                         p{
                             color:white;
                             background-color:transparent;
-                            padding:5px;
                             font-weight: 400;
 
 
@@ -223,7 +224,6 @@ html,body{
                     p{
                         color:white;
                         background-color:transparent;
-                        padding:5px;
                         font-weight: 400;
 
                     }

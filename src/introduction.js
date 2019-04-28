@@ -137,48 +137,7 @@ export class TextBox extends React.Component{
             <Fade when={(this.props.selectedSection == 3  ? true : false )} bottom>
 
             <div className="nav_bar_section_2">
-            <Fade when={(this.props.selectedSection == 3  ? true : false )} bottom>
-
-                <div onClick={()=>{this.state.toogle1On == false ? this.setState({toogle1On:true}) : this.setState({toogle1On:false})}}>
-                        <p>PPC</p>
-                </div>
-
-                <div className ={this.state.toogle1On == true ? 'reavel' : 'hidden'}>
-                <Fade when={this.state.toogle1On == true} dealy={1000}>
-                    <p>
-                        Some Text Her About Our Actvity And Learn More About Div Behavior so I could change it accordingly
-                    </p>
-                </Fade>
-                </div>
-
-                <div onClick={()=>{this.state.toogle2On == false ? this.setState({toogle2On:true}) : this.setState({toogle2On:false})}}>
-                        <p>Something Else</p>
-                </div>
-
-                <div className ={this.state.toogle2On == true ? 'reavel' : 'hidden'}>
-                        <Fade when={this.state.toogle2On == true} dealy={1000}>
-                            <p>
-                                Some Text Her About Our Actvity To Check How Div Behaves
-                                see more text here
-                            </p>
-                        </Fade>
-                    </div>
-
-                    <div onClick={()=>{this.state.toogle3On == false ? this.setState({toogle3On:true}) : this.setState({toogle3On:false})}}>
-                        <p>Invoice Account</p>
-                </div>
-
-                <div className ={this.state.toogle3On == true ? 'reavel' : 'hidden'}>
-                        <Fade when={this.state.toogle3On == true} dealy={1000}>
-                        <p>
-                            Payment Methods are Decliend Often. We Offer Our Client Custom Payment Solutions 
-                            to meet their own needs.
-
-                        </p>
-                        </Fade>
-                    </div>
-
-           </Fade>
+           
             </div>
             </Fade>
 

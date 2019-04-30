@@ -73,9 +73,6 @@ export class TextBox extends React.Component{
             offsetBottom:'',
             willReveal: false,
             selectedSection: this.props.selectedSection,
-            toogle1On: false,
-            toogle2On: false,
-            toogle3On:false
         };
     }
 

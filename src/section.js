@@ -2,6 +2,7 @@ import React from 'react';
 import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
 import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
+import {Services} from './section-b.js';
 
 export default class Section extends React.Component{
     constructor(props){
@@ -21,12 +22,14 @@ export default class Section extends React.Component{
             ],
         selectedSection: 0,
         TextBoxoffSetBottom:'',
-        windowHeight: window.innerHeight
+        windowHeight: window.innerHeight,
+        services: ['PPC','Invoice Account','Analytics']
     }
 
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);
         this.getTextBoxOffSetBottom = this.getTextBoxOffSetBottom.bind(this);
+        this.changeSection = this.changeSection.bind(this);
     }
     
 
@@ -42,11 +45,10 @@ export default class Section extends React.Component{
 
 
     componentWillUnmount(){
-     //   window.removeEventListener('scroll',this.handleScroll)
+     window.removeEventListener('scroll',this.handleScroll)
     }
 
     handleScroll(e){
-        console.log(currentY);
         let currentY = window.pageYOffset;
         this.setState({positionY: currentY});
     }
@@ -66,6 +68,10 @@ export default class Section extends React.Component{
         let offsetHeight = element.offsetHeight;
         let offsetBottom = element.offsetTop+offsetHeight;
         this.setState({TextBoxoffSetBottom: offsetBottom});
+    }
+
+    changeSection(i){
+        this.setState({selectedSection:i})
     }
 
     render(){
@@ -99,7 +105,9 @@ export default class Section extends React.Component{
                     currentHeadline={this.state.currentHeadline} 
                     windowHeight={this.state.windowHeight}
                     windowPosition={this.state.currentY}
-                    selectedSection={this.state.selectedSection}/>
+                    selectedSection={this.state.selectedSection}
+                    TextBoxoffSetBottom={this.state.TextBoxoffSetBottom}
+                    />
 
                 <TextBox
                     showSection={this.state.showSection} 
@@ -114,6 +122,13 @@ export default class Section extends React.Component{
                 windowPosition={this.state.positionY}
                 windowHeight={this.state.windowHeight}
                  />
+                 <Services 
+                 services={this.state.services} 
+                 windowHeight={this.state.windowHeight}
+                 windowPosition={this.state.positionY}
+                 changeSection={this.changeSection}
+                 selectedSection={this.state.selectedSection}
+                  />
                 </div>
               
             </div>

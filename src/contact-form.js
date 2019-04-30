@@ -50,7 +50,7 @@ export class ContactForm extends React.Component{
       }
 
       componentDidUpdate(prevProps){
-          let delta =this.state.offsetBottom - this.props.windowPosition ;
+          let delta =this.state.offsetTop - this.props.windowPosition ;
         if (prevProps !== this.props){
             if( delta < this.props.windowHeight){
                 this.setState({willReveal:true})
@@ -80,7 +80,7 @@ export class ContactForm extends React.Component{
                     </div>
 
                     <div>
-                       <input type="submit" value="Send"/>
+                       <input  type="submit" value="Send"/>
                     </div>
              </div>
                  </form>

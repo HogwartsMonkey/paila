@@ -10,7 +10,7 @@ export default class Section extends React.Component{
         willReavel: false, 
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
         currentHeadline: ['Choose Yourself','Who','How','What','why'],
-        positionY:1,
+        positionY:0,
         showSection: false,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
@@ -42,10 +42,11 @@ export default class Section extends React.Component{
 
 
     componentWillUnmount(){
-        window.removeEventListener('scroll',this.handleScroll)
+     //   window.removeEventListener('scroll',this.handleScroll)
     }
 
     handleScroll(e){
+        console.log(currentY);
         let currentY = window.pageYOffset;
         this.setState({positionY: currentY});
     }

@@ -9,6 +9,7 @@ export default class Section extends React.Component{
     super(props);
     this.state = { 
         willReavel: false, 
+        willReavelServices: false,
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
         currentHeadline: ['Choose Yourself','Who','How','What','why'],
         positionY:0,
@@ -25,11 +26,11 @@ export default class Section extends React.Component{
         windowHeight: window.innerHeight,
         services: ['PPC','Invoice Account','Analytics']
     }
-
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);
         this.getTextBoxOffSetBottom = this.getTextBoxOffSetBottom.bind(this);
         this.changeSection = this.changeSection.bind(this);
+        this.getServicesOffsetBottom = this.getServicesOffsetBottom.bind(this);
     }
     
 
@@ -38,8 +39,9 @@ export default class Section extends React.Component{
         let containerPosition = container.offsetTop;
         window.addEventListener('scroll',this.handleScroll);
         this.getTextBoxOffSetBottom();
+        this.getServicesOffsetBottom();
         this.setState((state)=>{
-             return ({willReavel : true,windowBottom:containerPosition })
+             return ({willReavel : true, windowBottom:containerPosition })
         })
     }
 
@@ -50,8 +52,19 @@ export default class Section extends React.Component{
 
     handleScroll(e){
         let currentY = window.pageYOffset;
-        this.setState({positionY: currentY});
-    }
+        let delta = this.state.servicesOffSetBottom - currentY ;
+            if( delta < this.state.windowHeight && this.state.willReavelServices == false){
+                this.setState({positionY: currentY,willReavelServices:true,selectedSection:3})
+            }
+            
+              else {
+                        this.setState({positionY: currentY,willReavelServices:false})
+                    
+                
+              }
+            
+        }
+   
 
     changeVisability(i){
         let delta =  this.state.TextBoxoffSetBottom-this.state.positionY;
@@ -68,6 +81,12 @@ export default class Section extends React.Component{
         let offsetHeight = element.offsetHeight;
         let offsetBottom = element.offsetTop+offsetHeight;
         this.setState({TextBoxoffSetBottom: offsetBottom});
+    }
+
+    getServicesOffsetBottom(){
+    const element = document.querySelector('#services-menu');
+      let offsetBottom = (element.offsetTop+element.offsetHeight);
+      this.setState({servicesOffSetBottom: offsetBottom});
     }
 
     changeSection(i){
@@ -128,6 +147,7 @@ export default class Section extends React.Component{
                  windowPosition={this.state.positionY}
                  changeSection={this.changeSection}
                  selectedSection={this.state.selectedSection}
+                 willReavel={this.state.willReavelServices}
                   />
                 </div>
               

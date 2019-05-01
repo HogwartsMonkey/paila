@@ -2,7 +2,7 @@ import React from 'react';
 import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
 import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
-import {Services} from './section-b.js';
+import {ResponsiveServicesMenu} from './is-mobile-function.js'
 
 export default class Section extends React.Component{
     constructor(props){
@@ -82,10 +82,11 @@ export default class Section extends React.Component{
 
     getServicesOffsetBottom(){
     const element = document.querySelector('#services-menu');
-      let offsetBottom = (element.offsetTop+element.offsetHeight);
+      let offsetBottom = (element.offsetTop + element.offsetHeight);
       this.setState({servicesOffsetBottom: offsetBottom});
     }
 
+    
   
 
     render(){
@@ -136,14 +137,11 @@ export default class Section extends React.Component{
                 windowPosition={this.state.positionY}
                 windowHeight={this.state.windowHeight}
                  />
-                 <Services 
-                 services={this.state.services} 
-                 windowHeight={this.state.windowHeight}
-                 windowPosition={this.state.positionY}
-                 changeSection={this.changeSection}
-                 selectedSection={this.state.selectedSection}
-                 willReveal={this.state.willReavelServices}
-                  />
+                <ResponsiveServicesMenu
+                    isMobile={false}
+                    services={this.state.services} 
+                     willReveal={this.state.willReavelServices}
+                    />
                 </div>
               
             </div>

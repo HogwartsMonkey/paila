@@ -477,11 +477,12 @@ html{
                 }
             }
         }
+
     }
     
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:480px){
     .background{
 
         .container{
@@ -496,7 +497,24 @@ html{
                 }
             }
         }
+    
+
+    .footer{
+
+        #services-menu{
+
+        .services-nav-menu{
+            width:100%;
+
+            .services-nav-menu-item{
+                text-align:center;      
+                display:block;
+            }
+
+        }
     }
+    }
+}
 
     
 }

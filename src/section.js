@@ -51,7 +51,7 @@ export default class Section extends React.Component{
 
     handleScroll(e){
         let currentY = window.pageYOffset;
-        let delta = this.state.servicesOffSetBottom - currentY ;
+        let delta = this.state.servicesOffsetBottom - currentY ;
             if( delta < this.state.windowHeight){
                 this.setState({positionY: currentY,willReavelServices:true,selectedSection:3})
             }
@@ -83,7 +83,7 @@ export default class Section extends React.Component{
     getServicesOffsetBottom(){
     const element = document.querySelector('#services-menu');
       let offsetBottom = (element.offsetTop+element.offsetHeight);
-      this.setState({servicesOffSetBottom: offsetBottom});
+      this.setState({servicesOffsetBottom: offsetBottom});
     }
 
   

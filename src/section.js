@@ -29,7 +29,6 @@ export default class Section extends React.Component{
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);
         this.getTextBoxOffSetBottom = this.getTextBoxOffSetBottom.bind(this);
-        this.changeSection = this.changeSection.bind(this);
         this.getServicesOffsetBottom = this.getServicesOffsetBottom.bind(this);
     }
     
@@ -53,16 +52,14 @@ export default class Section extends React.Component{
     handleScroll(e){
         let currentY = window.pageYOffset;
         let delta = this.state.servicesOffSetBottom - currentY ;
-            if( delta < this.state.windowHeight && this.state.willReavelServices == false){
+            if( delta < this.state.windowHeight){
                 this.setState({positionY: currentY,willReavelServices:true,selectedSection:3})
             }
             
               else {
-                        this.setState({positionY: currentY,willReavelServices:false})
-                    
-                
-              }
-            
+
+                        this.setState({positionY: currentY,willReavelServices:false})       
+              } 
         }
    
 
@@ -89,9 +86,7 @@ export default class Section extends React.Component{
       this.setState({servicesOffSetBottom: offsetBottom});
     }
 
-    changeSection(i){
-        this.setState({selectedSection:i})
-    }
+  
 
     render(){
 
@@ -147,7 +142,7 @@ export default class Section extends React.Component{
                  windowPosition={this.state.positionY}
                  changeSection={this.changeSection}
                  selectedSection={this.state.selectedSection}
-                 willReavel={this.state.willReavelServices}
+                 willReveal={this.state.willReavelServices}
                   />
                 </div>
               

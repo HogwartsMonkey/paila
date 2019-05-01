@@ -6,16 +6,15 @@ export class Services extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            willReveal: this.props.willRevealServices,
             offsetTop:'',
-            changeSection:this.props.changeSection
+            willReveal: this.props.willReveal,
 
         }
     }
 
     componentDidUpdate(prevProps){
-        if( prevProps.willRevealServices !== this.props.willRevealServices){
-            this.setState({willReveal:this.props.willRevealServices})
+        if( prevProps.willReveal !== this.props.willReveal){
+            this.setState({willReveal:this.props.willReveal})
         }
     }
 

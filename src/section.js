@@ -14,6 +14,7 @@ export default class Section extends React.Component{
         currentHeadline: ['Choose Yourself','Who','How','What','why'],
         positionY:0,
         showSection: false,
+        isMobile:true,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
             'Online Industry Centric. We Help Our Clients Break Their Benchmark Glass Ceiling.',
@@ -38,7 +39,7 @@ export default class Section extends React.Component{
         let containerPosition = container.offsetTop;
         window.addEventListener('scroll',this.handleScroll);
         this.getTextBoxOffSetBottom();
-        this.getServicesOffsetBottom();
+        this.getServicesOffsetBottom(this.state.isMobile);
         this.setState((state)=>{
              return ({willReavel : true, windowBottom:containerPosition })
         })
@@ -80,10 +81,10 @@ export default class Section extends React.Component{
         this.setState({TextBoxoffSetBottom: offsetBottom});
     }
 
-    getServicesOffsetBottom(){
-    const element = document.querySelector('#services-menu');
-      let offsetBottom = (element.offsetTop + element.offsetHeight);
-      this.setState({servicesOffsetBottom: offsetBottom});
+    getServicesOffsetBottom(isMobile){
+        let element = (isMobile == true ?  document.querySelector('#services-menu-flex') : document.querySelector('#services-menu'));
+        let offsetBottom = (element.offsetTop + element.offsetHeight);
+        this.setState({servicesOffsetBottom: offsetBottom});
     }
 
     
@@ -138,7 +139,7 @@ export default class Section extends React.Component{
                 windowHeight={this.state.windowHeight}
                  />
                 <ResponsiveServicesMenu
-                    isMobile={false}
+                    isMobile={this.state.isMobile}
                     services={this.state.services} 
                      willReveal={this.state.willReavelServices}
                     />

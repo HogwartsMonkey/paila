@@ -79,21 +79,21 @@ export class ServicesMobile extends React.Component{
         return(
 
             <Fade when={this.state.willReveal} left >
-            <div id="services-menu" >
+            <div id="services-menu-flex" >
                 
-                    <div className="services-nav-menu-item">
+                    <div className="services-nav-menu-flex-item">
 
                         {this.props.services[0]}
                      </div>
                        
               
 
-                    <div className="services-nav-menu-item">
+                    <div className="services-nav-menu-flex-item">
                             {this.props.services[1]}
                     </div>
                         
                 
-                    <div className="services-nav-menu-item" onClick={()=>{ this.setState({toggleMenu:!this.state.toggleMenu  })}}>
+                    <div className="services-nav-menu-flex-item" onClick={()=>{ this.setState({toggleMenu:!this.state.toggleMenu  })}}>
                             {this.props.services[2]}
                     </div>
                  

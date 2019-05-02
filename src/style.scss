@@ -367,7 +367,25 @@ html{
 
 
             }
+
+            #services-menu-flex{
+                display:flex;
+                flex-direction: column;
+                
+                
+                .services-nav-menu-flex-item{
+                    text-align:center;
+                    background-color:black;
+                    letter-spacing: 0.1em;
+                    font-family: Verdana, sans-serif; 
+                    color:white;
+                    border:black;
+                    outline-color: black;
+                }
+            }
       }
+
+     
 }
 
 

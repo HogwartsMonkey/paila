@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextSection,TextBox} from './introduction.js';
-import {ServicesDesktop} from './section-b.js';
+import {ServicesDesktop,ServicesMobile} from './section-b.js';
 
 
 
@@ -8,7 +8,10 @@ export function ResponsiveServicesMenu(props){
     const isMobile = props.isMobile;
     if(isMobile){
         return (
-                <TextBox/>
+            <ServicesMobile
+            services={props.services} 
+            willReveal={props.willReveal}
+            />
         )
         }
     

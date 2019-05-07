@@ -377,7 +377,7 @@ html{
                     display:flex;
                     flex-direction: column;
                     justify-content:flex-start;
-                    height:30px;
+                    height:auto;
                     text-align:center;
                     background-color:black;
                     letter-spacing: 0.1em;
@@ -388,7 +388,7 @@ html{
                 
                 
                     .services-nav-menu-flex-item{
-                        flex:1;
+                        max-height:100px;
                         text-align:center;
                         background-color:black;
                         letter-spacing: 0.1em;
@@ -398,10 +398,14 @@ html{
                         outline-color: black;
                         height:auto;
                         overflow:hidden;
-                        transition:flex 0.3s ease-out;
+                        transition:max-height 0.3s ease-out;
+
+                        &.left{
+                            text-align:left;
+                        }
                         
                         &.hidden{
-                            flex:0;
+                            max-height:0
                         }
                         
                     }

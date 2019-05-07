@@ -63,7 +63,9 @@ export class ServicesMobile extends React.Component{
         this.state = {
             offsetTop:'',
             willReveal: this.props.willReveal,
-            toggleMenu: false
+            toggleMenu1: false,
+            toogleMenu2: false,
+            toogleMenu3:false
 
         }
     }
@@ -81,33 +83,34 @@ export class ServicesMobile extends React.Component{
             <Fade when={this.state.willReveal} bottom >
             <div id="services-menu-flex" >
                 
-                    <div className="services-nav-menu-flex-container">
+                    <div className="services-nav-menu-flex-container left">
 
-                        <div className="services-nav-menu-flex-item ">
+                        <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu1:!this.state.toggleMenu1  })}}>
                             {this.props.services[0]}
                         </div>
-                    <div className="services-nav-menu-flex-item hidden"></div>
+                    <div className={this.state.toggleMenu1? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}></div>
 
                      </div>
                        
               
 
                     <div className="services-nav-menu-flex-container">
-                        <div className="services-nav-menu-flex-item ">
+                        <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu2:!this.state.toggleMenu2  })}}>
                             {this.props.services[1]}
                         </div>
-                            <div className="services-nav-menu-flex-item hidden">
-                            glgkslgksglksglksglk
+                            <div className={this.state.toggleMenu2? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                            glgkslgksglksglksglk sghsgsdgsdg gsdsdhsdhsdhsh
+                            dsdgsdgsdgsdgdsgsgsd astrwrwr
                             </div>
                     </div>
                         
                 
-                    <div className="services-nav-menu-flex-container" onClick={()=>{ this.setState({toggleMenu:!this.state.toggleMenu  })}}>
+                    <div className="services-nav-menu-flex-container" onClick={()=>{ this.setState({toggleMenu3:!this.state.toggleMenu3  })}}>
                            <div className="services-nav-menu-flex-item">
                              {this.props.services[2]}
                              </div>
-                             <div className={this.state.toggleMenu? "services-nav-menu-flex-item":"services-nav-menu-flex-item hidden"} >
-                             dlet see if it works
+                             <div className={this.state.toggleMenu3? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}  >
+                             dlet see if it works when you add a lot of words in it
                              </div>
                     </div>
                  

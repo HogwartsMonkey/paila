@@ -2,7 +2,8 @@ import React from 'react';
 import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
 import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
-import {ResponsiveServicesMenu} from './is-mobile-function.js'
+import {ResponsiveServicesMenu} from './is-mobile-function.js';
+import {isMobile} from 'react-device-detect';
 
 export default class Section extends React.Component{
     constructor(props){
@@ -14,7 +15,7 @@ export default class Section extends React.Component{
         currentHeadline: ['Choose Yourself','Who','How','What','why'],
         positionY:0,
         showSection: false,
-        isMobile:true,
+        isMobile:isMobile,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
             'Online Industry Centric. We Help Our Clients Break Their Benchmark Glass Ceiling.',

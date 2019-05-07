@@ -350,7 +350,7 @@ html{
                     &.width-none{
                         width:1px;
                         display:inline-block;
-                        transition: width 500ms ease;
+                        transition: width 200ms ease;
                         background-color:black;
                         height:100%;
                     }
@@ -360,7 +360,7 @@ html{
                         width:calc((100%/6)*3);
                         background-color:black;
                         height:100%;
-                        transition: width 500ms ease;
+                        transition: width 200ms ease;
 
 
                     }

@@ -41,6 +41,9 @@ html{
     transform: $background-color;
 }
 
+.ffffa9 {
+    color:#ffffa9;
+}
 
 .background{
     background-color:black;
@@ -337,6 +340,7 @@ html{
                     width:calc(100%/6);
                     height:100%;
                     float:left;
+                    
 
                     .services-nav-menu-item{
                         padding:5px;
@@ -362,6 +366,8 @@ html{
                         background-color:black;
                         position: relative;
                         height:100%;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                         //transition: width 200ms linear;
                             p{
                                 color:white;

@@ -26,7 +26,7 @@ export default class Section extends React.Component{
         selectedSection: 0,
         TextBoxoffSetBottom:'',
         windowHeight: window.innerHeight,
-        services: ['PPC','Invoice Account','Analytics']
+        services: ['','PPC','Invoice Account','Analytics']
     }
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);

@@ -360,8 +360,19 @@ html{
                         display:inline-block;
                         width:calc((100%/6)*3);
                         background-color:black;
+                        position: relative;
                         height:100%;
                         //transition: width 200ms linear;
+                            p{
+                                color:white;
+                                position: absolute;
+                                letter-spacing: 0.1em;
+                                font-family: Verdana, sans-serif; 
+                                padding-left:10px;
+                                padding-top:10px;
+                                
+
+                            }
 
 
                     }

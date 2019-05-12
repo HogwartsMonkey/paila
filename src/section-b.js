@@ -9,9 +9,11 @@ export class ServicesDesktop extends React.Component{
         this.state = {
             offsetTop:'',
             willReveal: this.props.willReveal,
+            selectedSection:0,
             toggleMenu: false
 
         }
+        this.toggleMenu = this.toggleMenu.bind(this);
     }
 
     componentDidUpdate(prevProps){
@@ -20,6 +22,15 @@ export class ServicesDesktop extends React.Component{
         }
     }
 
+    toggleMenu(i){
+        if(this.state.toggleMenu){
+            this.setState({selectedSection:i})
+        }
+        else{
+            this.setState({toggleMenu:!this.state.toogleMenu,selectedSection:i})
+        }
+
+    }
     
     render(){
         return(
@@ -31,19 +42,19 @@ export class ServicesDesktop extends React.Component{
              <Fade when={this.state.willReveal} left>
                 <div className="services-nav-menu">
                 
-                    <div className="services-nav-menu-item">
+                    <div className="services-nav-menu-item" onClick={()=>{this.toggleMenu(1)}}>
 
                         {this.props.services[1]}
                      </div>
                        
               
 
-                    <div className="services-nav-menu-item">
+                    <div className="services-nav-menu-item" onClick={()=>{this.toggleMenu(2)}}>
                             {this.props.services[2]}
                     </div>
                         
                 
-                    <div className="services-nav-menu-item yellow" onClick={()=>{ this.setState({toggleMenu:!this.state.toggleMenu  })}}>
+                    <div className="services-nav-menu-item yellow" onClick={()=>{this.toggleMenu(3)}}>
                             {this.props.services[3]}
                     </div>
                  
@@ -52,7 +63,24 @@ export class ServicesDesktop extends React.Component{
                 </Fade>
             
                 <Fade when={this.state.toggleMenu} left distance={'10%'} duration={400}>
-                    <div className={this.state.toggleMenu == true && this.state.willReveal ==true? 'services-nav-menu-content width-full' : 'services-nav-menu-content width-none'}></div>
+                    <div className={this.state.toggleMenu == true && this.state.willReveal ==true? 'services-nav-menu-content width-full' : 'services-nav-menu-content width-none'}>
+                    
+                    <Fade when={(this.state.selectedSection == 0  ? true : false )} >
+                    <p>{this.props.servicesDesc[0]} </p>
+                     </Fade>
+                     <Fade when={(this.state.selectedSection == 1  ? true : false )} >
+                    <p>{this.props.servicesDesc[1]} </p>
+                     </Fade>
+                     <Fade when={(this.state.selectedSection == 2  ? true : false )} >
+                    <p>{this.props.servicesDesc[2]} </p>
+                     </Fade>
+                     <Fade when={(this.state.selectedSection == 3  ? true : false )} >
+                    <p>{this.props.servicesDesc[3]} </p>
+                     </Fade>
+        
+                    
+                    
+                    </div>
                 </Fade>
 
           </div>
@@ -95,7 +123,13 @@ export class ServicesMobile extends React.Component{
                         <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu1:!this.state.toggleMenu1  })}}>
                             {this.props.services[1]}
                         </div>
-                    <div className={this.state.toggleMenu1? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}></div>
+                    <div className={this.state.toggleMenu1? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                            <Fade when = {this.state.toggleMenu1} >
+                             { this.props.servicesDesc[1]}
+                             </Fade>
+                    
+                    </div>
+                                
 
                      </div>
                        
@@ -106,8 +140,9 @@ export class ServicesMobile extends React.Component{
                             {this.props.services[2]}
                         </div>
                             <div className={this.state.toggleMenu2? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
-                            glgkslgksglksglksglk sghsgsdgsdg gsdsdhsdhsdhsh
-                            dsdgsdgsdgsdgdsgsgsd astrwrwr
+                            <Fade when = {this.state.toggleMenu2}  spy={this.state.toogleMenu2}>
+                             { this.props.servicesDesc[2]}
+                             </Fade>
                             </div>
                     </div>
                         
@@ -116,8 +151,10 @@ export class ServicesMobile extends React.Component{
                            <div className="services-nav-menu-flex-item">
                              {this.props.services[3]}
                              </div>
-                             <div className={this.state.toggleMenu3? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}  >
-                             dlet see if it works when you add a lot of words in it
+                             <div className={this.state.toggleMenu3? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                             <Fade when = {this.state.toggleMenu3}   spy={this.state.toogleMenu3} >
+                             { this.props.servicesDesc[3]}
+                             </Fade>
                              </div>
                     </div>
                  

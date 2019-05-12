@@ -11,6 +11,7 @@ export function ResponsiveServicesMenu(props){
             <ServicesMobile
             services={props.services} 
             willReveal={props.willReveal}
+            servicesDesc = {props.servicesDesc}
             />
         )
         }
@@ -19,6 +20,8 @@ export function ResponsiveServicesMenu(props){
              <ServicesDesktop
                  services={props.services} 
                  willReveal={props.willReveal}
+                 servicesDesc = {props.servicesDesc}
+
                  />
       )
       }

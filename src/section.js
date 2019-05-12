@@ -26,7 +26,14 @@ export default class Section extends React.Component{
         selectedSection: 0,
         TextBoxoffSetBottom:'',
         windowHeight: window.innerHeight,
-        services: ['','PPC','Invoice Account','Analytics']
+        services: ['','PPC','Invoice Account','Analytics'],
+        servicesDesc:[
+            '',
+            'Manage Your SEM Activity Wisely. Get Optimized Results and Grow Further',
+            'Many accounts get deactivated or susspened because of payment issues. consider solved',
+            'Tailored-Made solutions or SaSS providers'
+
+        ]
     }
         this.handleScroll = this.handleScroll.bind(this);
         this.changeVisability = this.changeVisability.bind(this);
@@ -143,6 +150,7 @@ export default class Section extends React.Component{
                     isMobile={this.state.isMobile}
                     services={this.state.services} 
                      willReveal={this.state.willReavelServices}
+                     servicesDesc={this.state.servicesDesc}
                     />
                 </div>
               

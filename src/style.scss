@@ -348,9 +348,10 @@ html{
                     overflow:auto;
                     
                     &.width-none{
+                        right:0;
                         width:1px;
                         display:inline-block;
-                        transition: width 200ms ease;
+                        //transition: width 200ms linear;
                         background-color:black;
                         height:100%;
                     }
@@ -360,7 +361,7 @@ html{
                         width:calc((100%/6)*3);
                         background-color:black;
                         height:100%;
-                        transition: width 200ms ease;
+                        //transition: width 200ms linear;
 
 
                     }
@@ -397,6 +398,7 @@ html{
                         border:black;
                         outline-color: black;
                         height:auto;
+                        padding-top:10px;
                         overflow:hidden;
                         transition:max-height 0.3s ease-out;
 
@@ -495,11 +497,17 @@ html{
             form{
                 display:inline-block;
 
+            .form{
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
                 div{
                     display:block;
                     position:relative;
                     min-height: 40px;
                     width:100%;
+                    border-radius: 0px;
 
                     input{
 
@@ -546,6 +554,13 @@ html{
     
 
     .footer{
+
+        form{
+            
+        .form{
+                border-radius: 0px;
+            }
+        }
 
         #services-menu{
 

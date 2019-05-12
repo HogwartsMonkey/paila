@@ -24,8 +24,11 @@ export class ServicesDesktop extends React.Component{
     render(){
         return(
 
-            <Fade when={this.state.willReveal} left >
-            <div id="services-menu" >
+            <Fade when={this.state.willReveal} left>
+                
+            <div id="services-menu">
+
+             <Fade when={this.state.willReveal} left>
                 <div className="services-nav-menu">
                 
                     <div className="services-nav-menu-item">
@@ -46,11 +49,15 @@ export class ServicesDesktop extends React.Component{
                  
                    
                 </div>
-                <div className={this.state.toggleMenu == true ? 'services-nav-menu-content width-full' : 'services-nav-menu-content width-none'}></div>
-
+                </Fade>
+            
+                <Fade when={this.state.toggleMenu} left distance={'10%'}>
+                    <div className={this.state.toggleMenu == true ? 'services-nav-menu-content width-full' : 'services-nav-menu-content width-none'}></div>
+                </Fade>
 
           </div>
           </Fade>
+       
 
 
         )

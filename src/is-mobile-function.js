@@ -12,6 +12,7 @@ export function ResponsiveServicesMenu(props){
             services={props.services} 
             willReveal={props.willReveal}
             servicesDesc = {props.servicesDesc}
+            selectedSection = {props.selectedSection}
             />
         )
         }

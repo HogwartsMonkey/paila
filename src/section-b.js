@@ -98,6 +98,7 @@ export class ServicesMobile extends React.Component{
         this.state = {
             offsetTop:'',
             willReveal: this.props.willReveal,
+            selectedSection:this.props.selectedSection,
             toggleMenu1: false,
             toogleMenu2: false,
             toogleMenu3:false
@@ -106,8 +107,8 @@ export class ServicesMobile extends React.Component{
     }
 
     componentDidUpdate(prevProps){
-        if( prevProps.willReveal !== this.props.willReveal){
-            this.setState({willReveal:this.props.willReveal})
+        if( prevProps.willReveal !== this.props.willReveal || prevProps.selectedSection !== this.props.selectedSection){
+            this.setState({willReveal:this.props.willReveal,selectedSection:this.props.selectedSection})
         }
     }
 
@@ -115,7 +116,7 @@ export class ServicesMobile extends React.Component{
     render(){
         return(
 
-            <Fade when={this.state.willReveal} bottom >
+            <Fade when={this.state.willReveal || this.state.selectedSection==3? true : false} bottom >
             <div id="services-menu-flex" >
                 
                     <div className="services-nav-menu-flex-container left">

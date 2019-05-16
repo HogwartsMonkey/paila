@@ -17,6 +17,7 @@ export default class Section extends React.Component{
         positionY:0,
         showSection: false,
         isMobile:isMobile,
+        selectedSection:0,
         currentTextInTextBox: [
             'Reach New Audiences. Enhance Each Ones Value. Reveal Your Business True Potential',
             'Online Industry Centric. We Help Our Clients Break Their Benchmark Glass Ceiling.',
@@ -24,7 +25,6 @@ export default class Section extends React.Component{
             'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.2',
             'Iusto paulo lucilius sit in. Errem bonorum eos te. Eu prima dolore cum. Et vim augue suavitate, dolorum salutandi complectitur vix cu. In nullam noster vim, te est exerci aperiam, quo euismod salutatus eu.',
             ],
-        selectedSection: 0,
         TextBoxoffSetBottom:'',
         windowHeight: window.innerHeight,
         services: ['','PPC','Invoice Account','Analytics'],
@@ -157,6 +157,7 @@ export default class Section extends React.Component{
                     services={this.state.services} 
                      willReveal={this.state.willReavelServices}
                      servicesDesc={this.state.servicesDesc}
+                     selectedSection={this.state.selectedSection}
                      
                     />
                 </div>

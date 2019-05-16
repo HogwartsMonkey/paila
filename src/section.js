@@ -11,6 +11,7 @@ export default class Section extends React.Component{
     this.state = { 
         willReavel: false, 
         willReavelServices: false,
+        isWhenClicked: false,
         frontLayerStyle:{backgroundColor:'trasparent',width:'100%',height:'100%',transition:'background-color 2s ease'},
         currentHeadline: ['Choose Yourself','Who','How','What','why'],
         positionY:0,
@@ -39,6 +40,7 @@ export default class Section extends React.Component{
         this.changeVisability = this.changeVisability.bind(this);
         this.getTextBoxOffSetBottom = this.getTextBoxOffSetBottom.bind(this);
         this.getServicesOffsetBottom = this.getServicesOffsetBottom.bind(this);
+        
     }
     
 
@@ -95,6 +97,7 @@ export default class Section extends React.Component{
         this.setState({servicesOffsetBottom: offsetBottom});
     }
 
+
     
   
 
@@ -121,6 +124,8 @@ export default class Section extends React.Component{
                 willReavel={this.state.willReavel} 
                 selectedSection={this.state.selectedSection}
                 TextBoxOffSetBottom={this.state.TextBoxoffSetBottom} 
+                windowBottom = {this.state.windowBottom}
+                
                 />
 
                 <TextSection 
@@ -140,7 +145,8 @@ export default class Section extends React.Component{
                     selectedSection={this.state.selectedSection}
                     TextBoxoffSetBottom={this.state.TextBoxoffSetBottom}
                     windowHeight={this.state.windowHeight}
-                />
+                    
+             />
                 <div className="footer">
                 <ContactForm 
                 windowPosition={this.state.positionY}
@@ -151,6 +157,7 @@ export default class Section extends React.Component{
                     services={this.state.services} 
                      willReveal={this.state.willReavelServices}
                      servicesDesc={this.state.servicesDesc}
+                     
                     />
                 </div>
               

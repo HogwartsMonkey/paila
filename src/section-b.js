@@ -41,23 +41,28 @@ export class ServicesDesktop extends React.Component{
 
              <Fade when={this.state.willReveal} left>
                 <div className="services-nav-menu">
-                
-                    <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
 
-                        {this.props.services[1]}
-                     </div>
-                       
-              
+                   <div className="row"> 
+                        <div></div>
+                        <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
 
-                    <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
-                            {this.props.services[2]}
+                            {this.props.services[1]}
+                        </div>
+                    </div>     
+
+                    <div className="row"> 
+                        <div className="circle"></div>
+                        <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
+                                {this.props.services[2]}
+                        </div>
                     </div>
                         
-                
-                    <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
-                            {this.props.services[3]}
+                    <div className="row">
+                        <div></div>
+                        <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
+                                {this.props.services[3]}
+                        </div>
                     </div>
-                 
                    
                 </div>
                 </Fade>

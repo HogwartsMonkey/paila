@@ -352,7 +352,7 @@ html{
                 .services-nav-menu{
                     background-color:black;
                     display:inline-block;
-                    color:white;
+                    color:black;
                     font-size:16px;
                     letter-spacing: 0.1em;
                     font-family: Verdana, sans-serif; 
@@ -381,22 +381,22 @@ html{
 
                                }
 
-                               .horizontal{
-                                position: absolute;
-                                top:50%;
-                                left:50%;
-                                transform:translate(-50%,-50%);
-                                height:2px;
-                                width:10px;
-                                background-color:white;
-
+                               .vertical::after{
+                                   content:"";
+                                    position: absolute;
+                                    
+                                    border-top:5px solid transparent;
+                                    border-left:10px solid white;
+                                    border-bottom:5px solid transparent;
                                }
+
+                              
                            }     
                             
 
                             .services-nav-menu-item{
                                 padding:5px 0 5px 0;
-                                
+                                color:white;
                                 font-weight: 400;
                                 display:inline-block;
                             }
@@ -411,7 +411,7 @@ html{
                         width:1px;
                         display:inline-block;
                         //transition: width 200ms linear;
-                        background-color:white;
+                        background-color:black;
                         height:100%;
                     }
 

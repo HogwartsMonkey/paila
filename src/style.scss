@@ -67,6 +67,7 @@ html{
     color:#ffffa9;
 }
 
+
 .background{
     background-color:black;
     width:100%;
@@ -510,9 +511,15 @@ html{
                         &.left{
                             text-align:left;
                         }
+
+                        &.text{
+                            font-size:16px;
+                        }
+                        
                         
                         &.hidden{
-                            max-height:0
+                            max-height:0;
+                            padding:0;
                         }
                         
                     }

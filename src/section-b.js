@@ -144,7 +144,7 @@ export class ServicesMobile extends React.Component{
                         <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu1:!this.state.toggleMenu1  })}}>
                             {this.props.services[1]}
                         </div>
-                    <div className={this.state.toggleMenu1? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                    <div className={this.state.toggleMenu1? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text hidden"}>
                             <Fade when = {this.state.toggleMenu1} >
                              { this.props.servicesDesc[1]}
                              </Fade>
@@ -160,7 +160,7 @@ export class ServicesMobile extends React.Component{
                         <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu2:!this.state.toggleMenu2  })}}>
                             {this.props.services[2]}
                         </div>
-                            <div className={this.state.toggleMenu2? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                            <div className={this.state.toggleMenu2? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text hidden"}>
                             <Fade when = {this.state.toggleMenu2}  spy={this.state.toogleMenu2}>
                              { this.props.servicesDesc[2]}
                              </Fade>
@@ -172,7 +172,7 @@ export class ServicesMobile extends React.Component{
                            <div className="services-nav-menu-flex-item">
                              {this.props.services[3]}
                              </div>
-                             <div className={this.state.toggleMenu3? "services-nav-menu-flex-item left":"services-nav-menu-flex-item left hidden"}>
+                             <div className={this.state.toggleMenu3? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text  hidden"}>
                              <Fade when = {this.state.toggleMenu3}   spy={this.state.toogleMenu3} >
                              { this.props.servicesDesc[3]}
                              </Fade>

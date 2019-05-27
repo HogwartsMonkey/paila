@@ -363,10 +363,11 @@ html{
                     background-color:black;
                     display:inline-block;
                     color:black;
-                    font-size:16px;
+                    font-size:20px;
+                    
                     letter-spacing: 0.1em;
                     font-family: Verdana, sans-serif; 
-                    width:calc(100%/5);
+                    width:calc((100%/5)*1.5);
                     height:100%;
                     float:left;
 
@@ -670,7 +671,9 @@ html{
         form{
             
         .form{
+                overflow:auto;
                 border-radius: 0px;
+                padding-bottom:20px;
             }
         }
 

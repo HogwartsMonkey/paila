@@ -32,7 +32,7 @@ export default class Section extends React.Component{
             '',
             'Manage Your SEM Activity Wisely. Get Optimized Results and Grow Further',
             'Many accounts get deactivated or susspened because of payment issues. consider solved',
-            'Tailored-Made solutions or SaSS providers'
+            'Tailored-Made solutions or SaSS providers adjusted to scale'
 
         ]
     }

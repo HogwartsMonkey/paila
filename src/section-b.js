@@ -43,7 +43,12 @@ export class ServicesDesktop extends React.Component{
                 <div className="services-nav-menu">
 
                    <div className="row"> 
-                        <div></div>
+                        <div className="col-1-6">
+                            
+                        <div className="vertical"></div>
+                        <div className="horizontal"></div>
+
+                        </div>
                         <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
 
                             {this.props.services[1]}
@@ -51,14 +56,25 @@ export class ServicesDesktop extends React.Component{
                     </div>     
 
                     <div className="row"> 
-                        <div className="circle"></div>
+                    <div className="col-1-6">
+
+                        <div className="vertical"></div>
+                        <div className="horizontal"></div> 
+                          
+                        </div>
                         <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
                                 {this.props.services[2]}
                         </div>
                     </div>
                         
                     <div className="row">
-                        <div></div>
+                    <div className="col-1-6">
+                            
+                        <div className="vertical"></div>
+                        <div className="horizontal"></div>
+
+                    </div>
+
                         <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
                                 {this.props.services[3]}
                         </div>

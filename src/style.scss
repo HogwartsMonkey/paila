@@ -24,7 +24,16 @@ html{
     height:100%;
 }
 
+.col-1-6{
+    width:calc(100%/6);
+}
 
+[class|=col]{
+    float:left;
+    display:inline-block;
+    min-height:1px;
+
+}
 
 %display-block-container{
     display:block;
@@ -259,6 +268,7 @@ html{
         background:  white;
         height:100px;
         background: linear-gradient(to right, white 5%, #93a2b3 77%);
+        font-size:0;
             
        
             form{
@@ -343,23 +353,50 @@ html{
                     background-color:black;
                     display:inline-block;
                     color:white;
+                    font-size:16px;
                     letter-spacing: 0.1em;
                     font-family: Verdana, sans-serif; 
                     width:calc(100%/5);
                     height:100%;
                     float:left;
-                    padding-left:20px;
-                    margin:0;
+                   
                     
                     .row{
                          display:block;
                         height:calc(100%/3);
 
-                                
+                           .col-1-6{
+                               height:100%;
+                               background-color:black;
+                               position: relative;
+
+                               .vertical{
+                                   position: absolute;
+                                   top:50%;
+                                   left:50%;
+                                   transform:translate(-50%,-50%);
+                                   height:10px;
+                                   width:2px;
+                                   background-color:white;
+
+                               }
+
+                               .horizontal{
+                                position: absolute;
+                                top:50%;
+                                left:50%;
+                                transform:translate(-50%,-50%);
+                                height:2px;
+                                width:10px;
+                                background-color:white;
+
+                               }
+                           }     
                             
 
                             .services-nav-menu-item{
-                                padding:5px;
+                                padding:5px 0 5px 0;
+                                
                                 font-weight: 400;
                                 display:inline-block;
                             }
@@ -387,6 +424,8 @@ html{
                         
                             p{
                                 color:white;
+                                font-size:16px;
+
                                 position: absolute;
                                 letter-spacing: 0.1em;
                                 font-family: Verdana, sans-serif; 
@@ -531,7 +570,7 @@ html{
 
             form{
                 display:inline-block;
-                background-color:purple;
+                background-color:#811a6b;
 
             .form{
                 border-bottom-left-radius: 0px;
@@ -546,7 +585,7 @@ html{
                     min-height: 40px;
                     width:100%;
                     border-radius: 0px;
-                    background-color:purple ! important;
+                    background-color:#811a6b ! important;
 
 
                     input{

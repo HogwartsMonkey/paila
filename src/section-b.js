@@ -139,10 +139,12 @@ export class ServicesMobile extends React.Component{
             <Fade when={this.state.willReveal || this.state.selectedSection==3? true : false} bottom >
             <div id="services-menu-flex" >
                 
-                    <div className="services-nav-menu-flex-container left">
+                    <div className="services-nav-menu-flex-container ">
 
                         <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu1:!this.state.toggleMenu1  })}}>
-                            {this.props.services[1]}
+                          <div className="text-container">
+                              <p className={this.state.toggleMenu1 ? "translate":""}>  {this.props.services[1]} </p>
+                            </div>
                         </div>
                     <div className={this.state.toggleMenu1? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text hidden"}>
                             <Fade when = {this.state.toggleMenu1} >

@@ -521,6 +521,25 @@ html{
                             max-height:0;
                             padding:0;
                         }
+
+                            .text-container{
+                                    height:30px;
+                                    width:100%;
+                                    position: relative;
+
+                                    p{
+                                        display:inline-block;
+                                        position: absolute;
+                                        left:50%;
+                                        transform: translateX(-50%);
+                                        transition:transform 1s ease;
+
+                                        &.translate{
+                                            transform: translateX(-300%);
+                                        }
+                                    }
+
+                                }
                         
                     }
                 }

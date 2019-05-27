@@ -45,7 +45,7 @@ export class ServicesDesktop extends React.Component{
                    <div className="row"> 
                         <div className="col-1-6">
                             
-                        <div className="vertical"></div>
+                        <div className="vertical" onClick={()=>{this.toggleMenu(1)}}></div>
                         <div className="horizontal"></div>
 
                         </div>
@@ -58,7 +58,7 @@ export class ServicesDesktop extends React.Component{
                     <div className="row"> 
                     <div className="col-1-6">
 
-                        <div className="vertical"></div>
+                        <div className="vertical" onClick={()=>{this.toggleMenu(2)}}></div>
                         <div className="horizontal"></div> 
                           
                         </div>
@@ -70,7 +70,7 @@ export class ServicesDesktop extends React.Component{
                     <div className="row">
                     <div className="col-1-6">
                             
-                        <div className="vertical"></div>
+                        <div className="vertical" onClick={()=>{this.toggleMenu(3)}}></div>
                         <div className="horizontal"></div>
 
                     </div>

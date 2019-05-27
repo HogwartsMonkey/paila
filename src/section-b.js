@@ -9,8 +9,8 @@ export class ServicesDesktop extends React.Component{
         this.state = {
             offsetTop:'',
             willReveal: this.props.willReveal,
-            selectedSection:0,
-            toggleMenu: false
+            selectedSection: 1,
+            toggleMenu: true
 
         }
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -42,42 +42,41 @@ export class ServicesDesktop extends React.Component{
              <Fade when={this.state.willReveal} left>
                 <div className="services-nav-menu">
 
-                   <div className="row"> 
                         <div className="col-1-6">
-                            
-                        <div className="vertical" onClick={()=>{this.toggleMenu(1)}}></div>
-                        <div className="horizontal"></div>
 
-                        </div>
-                        <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
-
-                            {this.props.services[1]}
-                        </div>
-                    </div>     
-
-                    <div className="row"> 
-                    <div className="col-1-6">
-
-                        <div className="vertical" onClick={()=>{this.toggleMenu(2)}}></div>
-                        <div className="horizontal"></div> 
+                            <div className={this.state.selectedSection == 1 ? "row-1-3" : this.state.selectedSection == 2 ? "row-1-3 top": this.state.selectedSection == 3 ? "row-1-3 bottom" : "row-1-3"}>
+                               
+                                <div className="vertical"></div>
                           
+                            </div>
+
                         </div>
-                        <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
-                                {this.props.services[2]}
-                        </div>
-                    </div>
+
+                    <div className="col-5-6">
+
+                            <div className="row"> 
+                                
+                                    <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
+
+                                        {this.props.services[1]}
+                                    </div>
+                                </div>     
+
+                            <div className="row"> 
                         
-                    <div className="row">
-                    <div className="col-1-6">
+                                <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
+                                        {this.props.services[2]}
+                                </div>
+                            </div>
+                        
+                            <div className="row">
                             
-                        <div className="vertical" onClick={()=>{this.toggleMenu(3)}}></div>
-                        <div className="horizontal"></div>
+                                <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
+                                        {this.props.services[3]}
+                                </div>
 
-                    </div>
+                            </div>
 
-                        <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
-                                {this.props.services[3]}
-                        </div>
                     </div>
                    
                 </div>

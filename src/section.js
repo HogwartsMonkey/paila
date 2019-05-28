@@ -4,6 +4,7 @@ import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
 import {ResponsiveServicesMenu} from './is-mobile-function.js';
 import {isMobile} from 'react-device-detect';
+import { BottomLinks } from './links.js';
 
 export default class Section extends React.Component{
     constructor(props){
@@ -74,7 +75,7 @@ export default class Section extends React.Component{
         }
    
 
-    changeVisability(i){
+    changeVisability(i,isMobile){
         let delta =  this.state.TextBoxoffSetBottom-this.state.positionY;
         if(delta > this.state.windowHeight){
         window.scrollTo({top:this.state.windowBottom,behavior:'smooth'})
@@ -125,7 +126,8 @@ export default class Section extends React.Component{
                 selectedSection={this.state.selectedSection}
                 TextBoxOffSetBottom={this.state.TextBoxoffSetBottom} 
                 windowBottom = {this.state.windowBottom}
-                
+                isMobile = {this.state.isMobile}
+                servicesOffsetBottom = {this.state.servicesOffsetBottom}
                 />
 
                 <TextSection 
@@ -161,9 +163,9 @@ export default class Section extends React.Component{
                      
                     />
                 </div>
-              
+               
             </div>
-
+            <BottomLinks/>
             </React.Fragment>
         )
     };

@@ -7,7 +7,7 @@ export class BottomLinks extends React.Component{
 
     render(){
         return(
-                    <div style={{width:'100%',height:'100px',backgroundColor:'black',bottom:'0'}}>
+                    <div style={{width:'100%',height:'10%',backgroundColor:'white'}}>
 
                     </div>
         )

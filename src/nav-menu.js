@@ -67,7 +67,7 @@ return(
           <ul>
               <li className={this.props.selectedSection == 1 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(1)}}>Who</li>
               <li className={this.props.selectedSection == 2 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(2)}}>How</li>
-              <li className={this.props.selectedSection == 3 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(3); this.props.isMobile? window.scrollTo({bottom:this.props.servicesOffsetBottom,behavior:'smooth'}):window.scrollTo({top:this.props.windowBottom,behavior:'smooth'})}}>What</li>
+              <li className={this.props.selectedSection == 3 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(3); this.props.isMobile? window.scrollTo({top:this.props.servicesOffsetBottom,behavior:'smooth'}):window.scrollTo({top:this.props.servicesOffsetBottom,behavior:'smooth'})}}>What</li>
               <li className={this.props.selectedSection == 4 ? "text-color" : ""} onClick={()=>{this.props.changeVisability(4)}}>Why</li>
           </ul>
         </div>

@@ -1,4 +1,8 @@
 import React from 'react';
+import Partner from './assets/google_partner.jpg';
+import Fade from 'react-reveal/Fade';
+import { Z_BLOCK } from 'zlib';
+
 
 export class BottomLinks extends React.Component{
     constructor(props){
@@ -7,9 +11,20 @@ export class BottomLinks extends React.Component{
 
     render(){
         return(
-                    <div style={{width:'100%',height:'10%',backgroundColor:'white'}}>
+            <Fade bottom>
+                    <div className="footer-bar">
+                        <div className="img-container">
+                            <img className="img-responsive" src={Partner}/>
+                        </div>
+                        <div className="col-3-4">
+                            <ul>
+                                <li>Privacy</li>
+                                <li>Cookies</li>
+                            </ul>
+                        </div>
 
                     </div>
+            </Fade>
         )
     };
 }

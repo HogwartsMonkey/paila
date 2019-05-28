@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavBar,TextHeader,FadeHeader} from './text-reveal.js';
+import {NavBar,TextHeader,FadeHeader} from './nav-menu.js';
 import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
 import {ResponsiveServicesMenu} from './is-mobile-function.js';

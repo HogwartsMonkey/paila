@@ -25,6 +25,13 @@ module.exports = {
             }
           },
           {
+                     test: /\.(png|svg|jpg|gif)$/,
+                     use: [
+                       'file-loader'
+                     ]
+                   },
+
+          {
             test: /\.(sa|sc|c)ss$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,

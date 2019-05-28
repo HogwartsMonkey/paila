@@ -67,6 +67,9 @@ html{
     color:#ffffa9;
 }
 
+.pink{
+   color: #eb1c85;
+}
 
 .background{
     background-color:black;
@@ -348,8 +351,7 @@ html{
                         &:nth-of-type(1){
                          
                         }
-                        &.pink{
-                        }
+                       
                         }
                     }
                 
@@ -429,6 +431,10 @@ html{
                                     color:white;
                                     font-weight: 400;
                                     display:inline-block;
+                                    
+                                    &.pink{
+                                        color:#eb1c85;
+                                    }
                                 }
                         }
                     }
@@ -514,6 +520,7 @@ html{
 
                         &.text{
                             font-size:16px;
+                            padding-left:10px;
                         }
                         
                         
@@ -532,10 +539,12 @@ html{
                                         position: absolute;
                                         left:50%;
                                         transform: translateX(-50%);
-                                        transition:transform 1s ease;
+                                        transition: transform  400ms ease, left 400ms ease;
+                                        white-space: nowrap;
 
                                         &.translate{
-                                            transform: translateX(-300%);
+                                            left:10px;
+                                            transform:translate(0);
                                         }
                                     }
 

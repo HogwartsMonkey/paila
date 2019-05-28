@@ -56,7 +56,7 @@ export class ServicesDesktop extends React.Component{
 
                             <div className="row"> 
                                 
-                                    <div className={this.state.selectedSection == 1 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(1)}}>
+                                    <div className={this.state.selectedSection == 1 ?"services-nav-menu-item pink" : "services-nav-menu-item ffffa9"} onClick={()=>{this.toggleMenu(1)}}>
 
                                         {this.props.services[1]}
                                     </div>
@@ -64,14 +64,14 @@ export class ServicesDesktop extends React.Component{
 
                             <div className="row"> 
                         
-                                <div className={this.state.selectedSection == 2 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(2)}}>
+                                <div className={this.state.selectedSection == 2 ?"services-nav-menu-item pink" : "services-nav-menu-item ffffa9 "} onClick={()=>{this.toggleMenu(2)}}>
                                         {this.props.services[2]}
                                 </div>
                             </div>
                         
                             <div className="row">
                             
-                                <div className={this.state.selectedSection == 3 ?"services-nav-menu-item ffffa9" : "services-nav-menu-item "} onClick={()=>{this.toggleMenu(3)}}>
+                                <div className={this.state.selectedSection == 3 ?"services-nav-menu-item pink" : "services-nav-menu-item ffffa9 "} onClick={()=>{this.toggleMenu(3)}}>
                                         {this.props.services[3]}
                                 </div>
 
@@ -160,7 +160,10 @@ export class ServicesMobile extends React.Component{
 
                     <div className="services-nav-menu-flex-container">
                         <div className="services-nav-menu-flex-item " onClick={()=>{ this.setState({toggleMenu2:!this.state.toggleMenu2  })}}>
-                            {this.props.services[2]}
+                        <div className="text-container">
+                              <p className={this.state.toggleMenu2 ? "translate":""}>  {this.props.services[2]} </p>
+                            </div>
+                        
                         </div>
                             <div className={this.state.toggleMenu2? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text hidden"}>
                             <Fade when = {this.state.toggleMenu2}  spy={this.state.toogleMenu2}>
@@ -172,7 +175,9 @@ export class ServicesMobile extends React.Component{
                 
                     <div className="services-nav-menu-flex-container" onClick={()=>{ this.setState({toggleMenu3:!this.state.toggleMenu3  })}}>
                            <div className="services-nav-menu-flex-item">
-                             {this.props.services[3]}
+                           <div className="text-container">
+                              <p className={this.state.toggleMenu3 ? "translate":""}>  {this.props.services[3]} </p>
+                            </div>
                              </div>
                              <div className={this.state.toggleMenu3? "services-nav-menu-flex-item text left ":"services-nav-menu-flex-item left text  hidden"}>
                              <Fade when = {this.state.toggleMenu3}   spy={this.state.toogleMenu3} >

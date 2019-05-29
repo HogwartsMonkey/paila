@@ -124,6 +124,7 @@ export class ServicesMobile extends React.Component{
             toogleMenu3:false
 
         }
+        this.getLastItemOffsetBottom = this.getLastItemOffsetBottom.bind(this);
     }
 
     componentDidUpdate(prevProps){
@@ -132,11 +133,17 @@ export class ServicesMobile extends React.Component{
         }
     }
 
+    getLastItemOffsetBottom(event){
+         let element = event.target;
+         let offSetBottom = element.style.visibility;
+        this.setState({offsetToptest:offSetBottom,toggleMenu1:!this.state.toggleMenu1})
+    }
+
     
     render(){
         return(
 
-            <Fade when={this.state.willReveal || this.state.selectedSection==3? true : false} bottom >
+            <Fade when={this.state.willReveal || this.state.selectedSection==3 ? true : false} bottom >
             <div id="services-menu-flex" >
                 
                     <div className="services-nav-menu-flex-container ">

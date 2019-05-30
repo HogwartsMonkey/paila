@@ -16,7 +16,7 @@ export class BottomLinks extends React.Component{
                         <div className="img-container">
                             <img className="img-responsive" src={Partner}/>
                         </div>
-                        <div className="col-3-4">
+                        <div className="col-3-5">
                             <ul>
                                 <li>Privacy</li>
                                 <li>Cookies</li>

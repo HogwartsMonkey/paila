@@ -160,12 +160,13 @@ export default class Section extends React.Component{
                      willReveal={this.state.willReavelServices}
                      servicesDesc={this.state.servicesDesc}
                      selectedSection={this.state.selectedSection}
+                     servicesOffsetBottom ={this.state.servicesOffsetBottom}
                      
                     />
                 </div>
-               
             </div>
             <BottomLinks/>
+
             </React.Fragment>
         )
     };

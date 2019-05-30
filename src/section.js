@@ -28,7 +28,7 @@ export default class Section extends React.Component{
             ],
         TextBoxoffSetBottom:'',
         windowHeight: window.innerHeight,
-        services: ['','PPC','Invoice Account','Analytics'],
+        services: ['','PPC','Payment Solutions','Analytics'],
         servicesDesc:[
             '',
             'Manage Your SEM Activity Wisely. Get Optimized Results and Grow Further',

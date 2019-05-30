@@ -494,10 +494,12 @@ html{
             #services-menu-flex{
                 display:flex;
                 flex-direction: column;
+                padding-bottom:10px;
                
 
                 .services-nav-menu-flex-container{
                     display:flex;
+                    padding:5px;
                     font-size:25px;
                     flex-direction: column;
                     justify-content:flex-start;
@@ -683,7 +685,7 @@ html{
         }
 
         .footer{            
-
+                height:auto;
 
             form{
                 display:inline-block;

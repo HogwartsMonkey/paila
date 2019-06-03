@@ -640,6 +640,18 @@ html{
 
          .container {
             background:  linear-gradient(to bottom,#ff99cc 20%,#ccff99 95%);
+
+            .headline-container{
+
+                bottom:-15px;
+
+                .h-1{
+                        h1{
+                            border-bottom-left-radius: 0px;
+                            border-top-left-radius: 0px;
+                        }
+                    }
+            }
         
             .text{
 
@@ -647,6 +659,9 @@ html{
 
                     p{
                         font-size:30px;
+                        white-space: nowrap;
+                        letter-spacing: 0.1ex;
+
                     }
                 }
             }
@@ -736,7 +751,7 @@ html{
     
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:320px){
     .background{
 
         .container{
@@ -747,6 +762,7 @@ html{
                 
                     p{
                         font-size:25px;
+                        white-space: nowrap;
                     }
                 }
             }

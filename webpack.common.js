@@ -8,7 +8,7 @@ const CleanWebpackPlugin  = require('clean-webpack-plugin');
 module.exports = {
     
         entry:{ 
-          main: './src/index.js'
+          main: './src/pages/index.js'
          
       },
       
@@ -40,7 +40,7 @@ module.exports = {
 
       plugins: [
         new  CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({title:'Caching',template:'./src/index.html'}),
+        new HtmlWebpackPlugin({title:'Caching',template:'./src/pages/index.html'}),
         new MiniCssExtractPlugin({
           filename: devMode ? '[name].css' : '[name].[hash].css',
           chunkFilename: devMode ? '[id].css' : '[id].[hash].css',

@@ -1,5 +1,5 @@
 import React from 'react';
-import Partner from './assets/google_partner.jpg';
+import Partner from '../assets/google_partner.jpg';
 import Fade from 'react-reveal/Fade';
 import { Z_BLOCK } from 'zlib';
 

@@ -753,6 +753,38 @@ html{
         }
 
     }
+
+    .footer-bar{
+        height:120px;
+        background: white;
+       
+            
+            .img-container{
+                padding:10px;
+                display:block;
+                float:none;
+                height:50%;
+            
+            }
+    
+            .col-3-5{
+                width:60%;
+    
+                ul{
+                    list-style:none;
+                    letter-spacing: 0.1em;
+                    font-family: Verdana, sans-serif; 
+                    padding:10px 0 0 25px;
+                    
+                    li{
+                        display:block;
+                        padding-right:10px;
+                        padding-bottom:5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+    }
     
 }
 

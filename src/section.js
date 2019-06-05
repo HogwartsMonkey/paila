@@ -61,10 +61,10 @@ export default class Section extends React.Component{
      window.removeEventListener('scroll',this.handleScroll)
     }
 
-    handleScroll(e){
+    handleScroll(e,isMobile){
         let currentY = window.pageYOffset;
-        let delta = this.state.servicesOffsetBottom - currentY ;
-            if( delta < this.state.windowHeight){
+        let delta = this.state.servicesOffsetTop - currentY ;
+            if( delta < this.state.windowHeight || isMobile == true){
                 this.setState({positionY: currentY,willReavelServices:true,selectedSection:3})
             }
             
@@ -75,9 +75,9 @@ export default class Section extends React.Component{
         }
    
 
-    changeVisability(i,isMobile){
-        let delta =  this.state.TextBoxoffSetBottom-this.state.positionY;
-        if(delta > this.state.windowHeight){
+    changeVisability(i){
+        let delta =  this.state.TextBoxoffSetBottom - this.state.positionY;
+        if(delta > this.state.windowHeight && this.selectedSection == 3  ){
         window.scrollTo({top:this.state.windowBottom,behavior:'smooth'})
         }
         if(this.state.showSection == false || this.state.selectedSection !== i){
@@ -94,8 +94,9 @@ export default class Section extends React.Component{
 
     getServicesOffsetBottom(isMobile){
         let element = (isMobile == true ?  document.querySelector('#services-menu-flex') : document.querySelector('#services-menu'));
-        let offsetBottom = (element.offsetTop + element.offsetHeight);
-        this.setState({servicesOffsetBottom: offsetBottom});
+        let offsetTop = (element.offsetTop);
+        let offSetBottom = element.offsetTop+element.offsetHeight
+        this.setState({servicesOffsetTop: offsetTop,servicesOffsetBottom:offSetBottom});
     }
 
 
@@ -160,7 +161,7 @@ export default class Section extends React.Component{
                      willReveal={this.state.willReavelServices}
                      servicesDesc={this.state.servicesDesc}
                      selectedSection={this.state.selectedSection}
-                     servicesOffsetBottom ={this.state.servicesOffsetBottom}
+                     servicesOffsetBottom ={this.state.servicesOffsetTop}
                      
                     />
                 </div>

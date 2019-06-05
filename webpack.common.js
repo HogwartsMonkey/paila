@@ -8,7 +8,7 @@ const CleanWebpackPlugin  = require('clean-webpack-plugin');
 module.exports = {
     
         entry:{ 
-          prod: './src/main.js'
+          main: './src/index.js'
          
       },
       
@@ -50,7 +50,12 @@ module.exports = {
       output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname,'dist')
-    }
+    },
+    optimization: {
+           splitChunks: {
+             chunks: 'all'
+           }
+      }
 
 
     }

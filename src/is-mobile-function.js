@@ -13,7 +13,7 @@ export function ResponsiveServicesMenu(props){
             willReveal={props.willReveal}
             servicesDesc = {props.servicesDesc}
             selectedSection = {props.selectedSection}
-            servicesOffsetBottom = {props.servicesOffsetBottom}
+            servicesOffsetBottom = {props.servicesOffsetTop}
             />
         )
         }
@@ -23,7 +23,7 @@ export function ResponsiveServicesMenu(props){
                  services={props.services} 
                  willReveal={props.willReveal}
                  servicesDesc = {props.servicesDesc}
-                 servicesOffsetBottom = {props.servicesOffsetBottom}
+                 servicesOffsetBottom = {props.servicesOffsetTop}
 
                  />
       )

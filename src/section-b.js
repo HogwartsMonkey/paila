@@ -124,7 +124,6 @@ export class ServicesMobile extends React.Component{
             toogleMenu3:false
 
         }
-        this.getLastItemOffsetBottom = this.getLastItemOffsetBottom.bind(this);
     }
 
     componentDidUpdate(prevProps){
@@ -133,10 +132,7 @@ export class ServicesMobile extends React.Component{
         }
     }
 
-    getLastItemOffsetBottom(event){
-         let clientY = event.clientY;
-        this.setState({clientY: clientY, toggleMenu1:!this.state.toggleMenu1});
-    }
+    
 
     
     render(){
@@ -147,7 +143,7 @@ export class ServicesMobile extends React.Component{
                 
                     <div className="services-nav-menu-flex-container ">
 
-                        <div className="services-nav-menu-flex-item " data-id="1" onClick={this.getLastItemOffsetBottom}>
+                        <div className="services-nav-menu-flex-item " data-id="1" onClick={()=>{ this.setState({toggleMenu1:!this.state.toggleMenu1  })}}>
                           <div className="text-container">
                               <p className={this.state.toggleMenu1 ? "translate":""}>  {this.props.services[1]} </p>
                             </div>

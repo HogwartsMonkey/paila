@@ -705,6 +705,8 @@ html{
             form{
                 display:inline-block;
                 background-color:#811a6b;
+                height:240px;
+               
 
             .form{
                 border-bottom-left-radius: 0px;
@@ -720,6 +722,7 @@ html{
                     width:100%;
                     border-radius: 0px;
                     background-color:#811a6b ! important;
+                    margin:5px;
 
 
                     input{
@@ -730,6 +733,7 @@ html{
                             left:50%;
                             transform: translate(-50%,-50%);
                             min-width: 70%;
+                            height:40px;
 
                            
                         }
@@ -739,6 +743,7 @@ html{
                             left:50%;
                             transform: translate(-50%,-50%);
                             min-width: 70%;
+                            height:40px;
 
 
                         }

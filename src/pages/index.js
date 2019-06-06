@@ -9,7 +9,7 @@ function AppRouter(){
   
      return(  
         <Router>
-      <Route exact path="/" component={Section} />
+      <Route exact path="/" component={renderSection} />
 
 <Fade bottom>
         <footer>
@@ -30,6 +30,16 @@ function AppRouter(){
       </Router>
     )
    
+}
+
+function renderSection({match}){
+    return(
+        <React.Fragment>
+            <Section match={match}/>
+        </React.Fragment>
+    )
+
+
 }
 
 ReactDOM.render(<AppRouter/>,document.getElementById('app'));

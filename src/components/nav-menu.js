@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class FadeHeader extends React.Component {
     constructor(props){
@@ -12,7 +13,7 @@ export class FadeHeader extends React.Component {
       
         <div className="h-1">
           <Fade when={this.props.willReavel}  duration={1000} bottom  delay={300}  >
-            <h1>Paila</h1>
+            <Link to={'${match.url}/privacy'}><h1>Paila</h1></Link>
           </Fade>
         </div>
         <div className="h-1">

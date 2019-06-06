@@ -1,5 +1,6 @@
 import React from 'react-dom';
 import ReactDOM from 'react-dom';
+import './privacy.scss';
 import PrivacySection from '../../src/components/privacy-section.js';
 
 class Privacy extends React.Component{

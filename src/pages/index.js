@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style.scss';
+import './index.scss';
 import Section from '../../src/components/section.js';
 
 class Main extends React.Component{

@@ -4,7 +4,7 @@ import {TextSection,TextBox} from './introduction.js';
 import {ContactForm} from './contact-form.js';
 import {ResponsiveServicesMenu} from './is-mobile-function.js';
 import {isMobile} from 'react-device-detect';
-import { BottomLinks } from './links.js';
+
 
 export default class Section extends React.Component{
     constructor(props){
@@ -166,7 +166,7 @@ export default class Section extends React.Component{
                     />
                 </div>
             </div>
-            <BottomLinks/>
+           
 
             </React.Fragment>
         )

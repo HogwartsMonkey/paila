@@ -18,7 +18,7 @@ export class BottomLinks extends React.Component{
                         </div>
                         <div className="col-3-5">
                             <ul>
-                                <li>Privacy</li>
+                                <li href="./privacy.html">Privacy</li>
                                 <li>Cookies</li>
                             </ul>
                         </div>

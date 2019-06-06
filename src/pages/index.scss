@@ -608,7 +608,46 @@ html{
 }
 
 
+footer{
+    background:white;
+    height:50px;
 
+
+    ul{
+        list-style:none;
+        color:black;
+        letter-spacing: 0.1em;
+        font-family: Verdana, sans-serif; 
+        padding:10px 0 0 25px;
+        border-color:none;
+        
+        li{
+            display:inline;
+            padding-right:10px;
+            border-color: none;
+            color:black;
+            cursor: pointer;
+            
+            a{
+                color:black;
+            }
+                a:visited{
+                    color:black;
+                }
+
+                a:link{
+                    text-decoration: none;
+                    color:black;
+                }
+            }
+
+            
+
+            
+
+        
+    }
+}
 
 
 @media only screen and (max-width:1300px){

@@ -129,6 +129,7 @@ export default class Section extends React.Component{
                 windowBottom = {this.state.windowBottom}
                 isMobile = {this.state.isMobile}
                 servicesOffsetBottom = {this.state.servicesOffsetBottom}
+                match = {this.props.match}
                 />
 
                 <TextSection 

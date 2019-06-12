@@ -4,11 +4,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 const CleanWebpackPlugin  = require('clean-webpack-plugin');
 
+function recursiveIssuer(m) {
+  if (m.issuer) {
+    return recursiveIssuer(m.issuer);
+  } else if (m.name) {
+    return m.name;
+  } else {
+    return false;
+  }
+}
 
 module.exports = {
     
         entry:{ 
-          main: './src/pages/index.js'
+          index: './src/pages/index.js'
          
       },
       
@@ -18,7 +27,13 @@ module.exports = {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
             use: {
-              loader: 'babel-loader'
+              loader: 'babel-loader',
+              options:{
+                presets: [
+                   '@babel/preset-env',
+                   '@babel/preset-react'
+                ]
+             }
             }
           },
           {
@@ -40,10 +55,10 @@ module.exports = {
 
       plugins: [
         new  CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({title:'Caching',template:'./src/pages/index.html'}),
+        new HtmlWebpackPlugin({template:'./src/pages/index.html',filename:'index.html'}),
         new MiniCssExtractPlugin({
-          filename: devMode ? '[name].css' : '[name].[hash].css',
-          chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+          filename: devMode ? '[name].css' : '[name].[contenthash].css',
+          chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
         })
       ],
 
@@ -51,11 +66,20 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname,'dist')
     },
+
     optimization: {
+           runtimeChunk: 'single',
            splitChunks: {
-             chunks: 'all'
+             cacheGroups: {
+               vendor: {
+                 test: /[\\/]node_modules[\\/]/,
+                 name: 'vendors',
+                 chunks: 'all'
+               }
+               
+             }
            }
-      }
+          }
 
 
     }

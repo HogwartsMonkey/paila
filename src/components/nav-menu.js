@@ -13,7 +13,7 @@ export class FadeHeader extends React.Component {
       
         <div className="h-1">
           <Fade when={this.props.willReavel}  duration={1000} bottom  delay={300}  >
-            <Link to={'${match.url}/privacy'}><h1>Paila</h1></Link>
+            <Link to={'/'}><h1>Paila</h1></Link>
           </Fade>
         </div>
         <div className="h-1">

@@ -12,7 +12,7 @@ export class FadeHeader extends React.Component {
       <div className="headline-container">
       
         <div className="h-1">
-          <Fade when={this.props.willReavel}  duration={1000} bottom  delay={300}  >
+          <Fade when={this.props.willReavel}  duration={this.props.duration} left={this.props.left} top={this.props.top} bottom={this.props.bottom}  delay={300}  >
             <Link to={'/'}><h1>Paila</h1></Link>
           </Fade>
         </div>

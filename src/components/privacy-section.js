@@ -13,7 +13,7 @@ export default class Privacy extends React.Component{
         return(
             <div className="background">
                     <div className="header">
-                    <FadeHeader/>
+                    <FadeHeader top={true} durtation={0}/>
                     </div>
                 <div style={{width:'100%',height:'500px'}}>
 

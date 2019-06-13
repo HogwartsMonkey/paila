@@ -115,7 +115,7 @@ export default class Section extends React.Component{
                     <div style={this.state.frontLayerStyle}>
 
                     <TextHeader willReavel={this.state.willReavel}/>
-                    <FadeHeader willReavel={this.state.willReavel}/>
+                    <FadeHeader willReavel={this.state.willReavel} bottom={true} durtation={1000}/>
 
                   </div>
 

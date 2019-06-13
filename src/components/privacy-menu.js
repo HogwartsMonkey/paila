@@ -11,9 +11,11 @@ export class PrivacyMenu extends React.Component{
     }
         render(){
             return (
-                <div style={{width:'50%',height:'100%',backgroundColor:'white'}}>
+                <Fade left={this.props.left}>
+                <div style={{width:'50%',height:'100%',backgroundColor:'white',display:'flex',flexDirection:'column'}}>
 
                 </div>
+                </Fade>
             )
         }
     

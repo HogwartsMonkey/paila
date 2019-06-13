@@ -13,8 +13,8 @@ export default class PrivacySectionContainer extends React.Component{
     render(){
         return(
                 <div style={{display:'flex',flexDirection:'row',width:'100%',height:'100%'}}>
-                    <PrivacyMenu></PrivacyMenu>
-                    <PrivacyDesc></PrivacyDesc>
+                    <PrivacyMenu left={true}></PrivacyMenu>
+                    <PrivacyDesc right={true}></PrivacyDesc>
                 </div>
 
         )

@@ -80,6 +80,11 @@ html{
     height:100%;
 }
 
+.flex-hidden{
+    max-height:0;
+    overflow: hidden;
+}
+
 .background{
     background-color:black;
     width:100%;

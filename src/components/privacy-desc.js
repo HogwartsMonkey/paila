@@ -12,7 +12,7 @@ export class PrivacyDesc extends React.Component{
         render(){
             return (
                 <Fade right={this.props.right}>
-                <div style={{width:'50%',height:'100%',backgroundColor:'red'}}>
+                <div style={{width:'50%',height:'100%',backgroundColor:'black'}}>
 
                 </div>
                 </Fade>

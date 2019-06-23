@@ -12,7 +12,7 @@ export class PrivacyMenu extends React.Component{
         render(){
             return (
                 <Fade left={this.props.left}>
-                <div style={{width:'50%',height:'100%',backgroundColor:'white',display:'flex',flexDirection:'column'}}>
+                <div className='privacy-menu-flex-child-container'>
                     <MenuItem/>
                 </div>
                 </Fade>
@@ -32,14 +32,15 @@ class MenuItem extends React.Component{
     }
 
      toggleMenu(e){
-        this.setState({toggleMenu: !this.state.toogleMenu})
+         var newState = !this.state.toggleMenu
+        this.setState({toggleMenu: newState})
     }
     
 
     render(){
         return(
             <div>
-                <div onClick={this.toggleMenu}>
+                <div onClick={()=>{this.toggleMenu()}}>
                     <p>What data do we collect?</p>
                 </div>
                 <div className={this.state.toggleMenu ? 'visable': 'flex-hidden'}>

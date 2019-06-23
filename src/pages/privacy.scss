@@ -1,3 +1,132 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    width:100%;
+    scroll-behavior: smooth;
+    background: linear-gradient(to right, white 5%, #93a2b3 77%);
+}
+
+
 html{
-    background:black;
+    height:100%;
+    overflow:auto;
+}
+
+
+#app{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.col-1-6{
+    width:calc(100%/6);
+}
+
+
+[class|=col]{
+    position: relative;
+    float:left;
+    display:inline-block;
+    min-height:1px;
+}
+
+[class|=row]{
+    position: relative;
+   width:100%;
+    display:block;
+    min-height:1px;
+}
+
+
+@mixin background-color($background-color){
+    -webkit-transform: $background-color;
+    -ms-transform: $background-color;
+    transform: $background-color;
+}
+
+
+
+.img-responsive{
+    width:auto;
+    height:100%;
+}
+
+.flex-hidden{
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in;
+}
+
+.background{
+    background-color:black;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+
+    .header{
+        width:100%;
+        height:100px;
+        background:  white;
+        position: relative;
+        .h-1{
+            display:block;
+                
+                h1{
+                    display:inline-block;
+                    background-color:black;
+                    color:white;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+                    font-size:25px;
+                    margin:10px 0 0 10px;
+                    text-align:left;
+                    padding: 0 10px;
+                    border-radius: 5px;
+                }
+        
+        }
+    }
+
+    .privacy-menu-container{
+        width:100%;
+        height:500px;
+        
+        .privacy-menu-flex-parent-container{
+            display:flex;
+            flex-direction:row;
+            width:100%;
+            height:100%;
+
+            .privacy-menu-flex-child-container{
+                padding:15px;
+                width:50%;
+                height:100%;
+                background-color:white;
+                display:flex;
+                flex-direction:column;
+
+                p{
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+                    font-size:15px;
+                }
+                .menu-item-collapsed{
+
+                }
+                
+                .visable{
+                    max-height:100px;
+                    transition:max-height 300ms ease-in-out;
+                }
+
+            }
+        }
+    }
+
+
+  
+    
 }

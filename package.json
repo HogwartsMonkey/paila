@@ -21,7 +21,7 @@
     "file-loader": "^3.0.1",
     "img-loader": "^3.0.1",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "node.js": "0.0.0",
     "react-device-detect": "^1.6.2",
     "react-reveal": "^1.2.2",
